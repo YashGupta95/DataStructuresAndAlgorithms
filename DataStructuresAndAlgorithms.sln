@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DoubleLinkedList", "LinkedL
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CircularLinkedList", "LinkedList\CircularLinkedList\CircularLinkedList.csproj", "{79907FA1-129E-4F69-90F4-E93AAD78E195}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeaderLinkedList", "LinkedList\HeaderLinkedList\HeaderLinkedList.csproj", "{75FF552B-991E-4DF7-B6DD-1D624FF76C0A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeaderLinkedList", "LinkedList\HeaderLinkedList\HeaderLinkedList.csproj", "{75FF552B-991E-4DF7-B6DD-1D624FF76C0A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", "{09F41B2E-40EC-4FB4-B8E6-25C31F3F7524}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackUsingArray", "Stack\StackUsingArray\StackUsingArray.csproj", "{A603AA76-A51D-4557-BE01-6145F389364E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackUsingLinkedList", "Stack\StackUsingLinkedList\StackUsingLinkedList.csproj", "{F0CDBFDC-1194-4671-A78E-7CF100E6869F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +37,14 @@ Global
 		{75FF552B-991E-4DF7-B6DD-1D624FF76C0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75FF552B-991E-4DF7-B6DD-1D624FF76C0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75FF552B-991E-4DF7-B6DD-1D624FF76C0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A603AA76-A51D-4557-BE01-6145F389364E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A603AA76-A51D-4557-BE01-6145F389364E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A603AA76-A51D-4557-BE01-6145F389364E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A603AA76-A51D-4557-BE01-6145F389364E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0CDBFDC-1194-4671-A78E-7CF100E6869F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0CDBFDC-1194-4671-A78E-7CF100E6869F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0CDBFDC-1194-4671-A78E-7CF100E6869F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0CDBFDC-1194-4671-A78E-7CF100E6869F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
