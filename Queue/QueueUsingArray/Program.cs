@@ -7,18 +7,17 @@ namespace QueueUsingArray
         private static void Main(string[] args)
         {
             int data;
-
-            QueueArray queueArray = new QueueArray(8);
+            var queueArray = new QueueArray(8);
 
             while (true)
             {
                 Console.WriteLine("------------------------------------------------------------------------");
-                Console.WriteLine("1.Insert an element in the queue");
-                Console.WriteLine("2.Delete an element from the queue");
-                Console.WriteLine("3.Display element at the front");
-                Console.WriteLine("4.Display all elements of the queue");
-                Console.WriteLine("5.Display size of the queue");
-                Console.WriteLine("6.Quit");
+                Console.WriteLine("1. Insert an element in the queue");
+                Console.WriteLine("2. Delete an element from the queue");
+                Console.WriteLine("3. Display element at the front");
+                Console.WriteLine("4. Display all elements of the queue");
+                Console.WriteLine("5. Display size of the queue");
+                Console.WriteLine("6. Quit");
                 Console.WriteLine("------------------------------------------------------------------------");
 
                 Console.Write("Enter your choice : ");

@@ -36,9 +36,9 @@ namespace QueueUsingCircularLinkedList
             return size;
         }
 
-        internal void Insert(int x)
+        internal void Insert(int element)
         {
-            var tempNode = new Node(x);
+            var tempNode = new Node(element);
 
             if (IsEmpty())
             {

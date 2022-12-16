@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace QueueUsingCircularLinkedList
+namespace CircularQueue
 {
     internal class Program
     {
@@ -8,7 +8,7 @@ namespace QueueUsingCircularLinkedList
         {
             int data;
 
-            var queueCircularLinkedList = new QueueCircularLinkedList();
+            var circularQueue = new CircularQueue(8);
 
             while (true)
             {
@@ -30,25 +30,25 @@ namespace QueueUsingCircularLinkedList
                 switch (choice)
                 {
                     case 1:
-                        Console.Write("Enter the element to be inserted : ");
+                        Console.Write("Enter the element to be inserted: ");
                         data = Convert.ToInt32(Console.ReadLine());
-                        queueCircularLinkedList.Insert(data);
+                        circularQueue.Insert(data);
                         break;
                     case 2:
-                        data = queueCircularLinkedList.Delete();
-                        Console.WriteLine($"Element deleted is : {data}");
+                        data = circularQueue.Delete();
+                        Console.WriteLine($"Element deleted is: {data}");
                         break;
                     case 3:
-                        Console.WriteLine($"Element at the front is : {queueCircularLinkedList.Peek()}");
+                        Console.WriteLine($"Element at the front is: {circularQueue.Peek()}");
                         break;
                     case 4:
-                        queueCircularLinkedList.Display();
+                        circularQueue.Display();
                         break;
                     case 5:
-                        Console.WriteLine($"Size of queue is: {queueCircularLinkedList.Size()}");
+                        Console.WriteLine($"Size of queue is: {circularQueue.Size()}");
                         break;
                     default:
-                        Console.WriteLine("Invalid choice");
+                        Console.WriteLine("Invalid choice!");
                         break;
                 }
 

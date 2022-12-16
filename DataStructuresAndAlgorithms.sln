@@ -15,11 +15,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StackUsingArray", "Stack\St
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StackUsingLinkedList", "Stack\StackUsingLinkedList\StackUsingLinkedList.csproj", "{F0CDBFDC-1194-4671-A78E-7CF100E6869F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueueUsingArray", "Queue\QueueUsingArray\QueueUsingArray.csproj", "{BE1D6F2A-E7BF-4C11-84FE-4EF8EE2A9D47}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueueUsingArray", "Queue\QueueUsingArray\QueueUsingArray.csproj", "{BE1D6F2A-E7BF-4C11-84FE-4EF8EE2A9D47}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueueUsingLinkedList", "Queue\QueueUsingLinkedList\QueueUsingLinkedList.csproj", "{8E47624D-1116-418B-8E3F-9A25884BA424}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueueUsingLinkedList", "Queue\QueueUsingLinkedList\QueueUsingLinkedList.csproj", "{8E47624D-1116-418B-8E3F-9A25884BA424}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueueUsingCircularLinkedList", "Queue\QueueUsingCircularLinkedList\QueueUsingCircularLinkedList.csproj", "{D765C6FE-AB4D-4597-9027-DBAE79A0B0C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueueUsingCircularLinkedList", "Queue\QueueUsingCircularLinkedList\QueueUsingCircularLinkedList.csproj", "{D765C6FE-AB4D-4597-9027-DBAE79A0B0C9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CircularQueue", "Queue\CircularQueue\CircularQueue.csproj", "{59244972-EE05-48F0-A7D0-C180411C884C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DequeUsingArray", "Queue\DequeUsingArray\DequeUsingArray.csproj", "{69B94541-C09E-4F3B-A56B-65FAEB4E182A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PriorityQueue", "Queue\PriorityQueue\PriorityQueue.csproj", "{0E17CD9A-71E0-4874-B907-EAC0117E243D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +69,18 @@ Global
 		{D765C6FE-AB4D-4597-9027-DBAE79A0B0C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D765C6FE-AB4D-4597-9027-DBAE79A0B0C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D765C6FE-AB4D-4597-9027-DBAE79A0B0C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59244972-EE05-48F0-A7D0-C180411C884C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59244972-EE05-48F0-A7D0-C180411C884C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59244972-EE05-48F0-A7D0-C180411C884C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59244972-EE05-48F0-A7D0-C180411C884C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69B94541-C09E-4F3B-A56B-65FAEB4E182A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69B94541-C09E-4F3B-A56B-65FAEB4E182A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69B94541-C09E-4F3B-A56B-65FAEB4E182A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69B94541-C09E-4F3B-A56B-65FAEB4E182A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E17CD9A-71E0-4874-B907-EAC0117E243D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E17CD9A-71E0-4874-B907-EAC0117E243D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E17CD9A-71E0-4874-B907-EAC0117E243D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E17CD9A-71E0-4874-B907-EAC0117E243D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
