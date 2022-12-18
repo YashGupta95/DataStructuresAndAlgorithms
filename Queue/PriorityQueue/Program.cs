@@ -12,9 +12,9 @@ namespace PriorityQueue
             while (true)
             {
                 Console.WriteLine("------------------------------------------------------------------------");
-                Console.WriteLine("1.Insert a new element");
-                Console.WriteLine("2.Delete an element");
-                Console.WriteLine("3.Display the queue");
+                Console.WriteLine("1.Insert a new element in Priority Queue");
+                Console.WriteLine("2.Delete an element from Priority Queue");
+                Console.WriteLine("3.Display the Priority Queue");
                 Console.WriteLine("4.Quit");
                 Console.WriteLine("------------------------------------------------------------------------");
 
