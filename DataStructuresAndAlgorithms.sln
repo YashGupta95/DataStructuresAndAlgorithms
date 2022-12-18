@@ -27,6 +27,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DequeUsingArray", "Queue\De
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PriorityQueue", "Queue\PriorityQueue\PriorityQueue.csproj", "{0E17CD9A-71E0-4874-B907-EAC0117E243D}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParenthesesValidation", "Stack\ParenthesesValidation\ParenthesesValidation.csproj", "{05EB3FED-2B5D-4659-AE72-0C7F1CC3DFE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfixToPostfix", "Stack\InfixToPostfix\InfixToPostfix.csproj", "{E6964ADC-7E4C-4FFA-8584-A37D621B9DFC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +85,14 @@ Global
 		{0E17CD9A-71E0-4874-B907-EAC0117E243D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E17CD9A-71E0-4874-B907-EAC0117E243D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E17CD9A-71E0-4874-B907-EAC0117E243D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05EB3FED-2B5D-4659-AE72-0C7F1CC3DFE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05EB3FED-2B5D-4659-AE72-0C7F1CC3DFE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05EB3FED-2B5D-4659-AE72-0C7F1CC3DFE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05EB3FED-2B5D-4659-AE72-0C7F1CC3DFE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6964ADC-7E4C-4FFA-8584-A37D621B9DFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6964ADC-7E4C-4FFA-8584-A37D621B9DFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6964ADC-7E4C-4FFA-8584-A37D621B9DFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6964ADC-7E4C-4FFA-8584-A37D621B9DFC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
