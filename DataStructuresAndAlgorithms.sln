@@ -29,7 +29,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PriorityQueue", "Queue\Prio
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParenthesesValidation", "Stack\ParenthesesValidation\ParenthesesValidation.csproj", "{05EB3FED-2B5D-4659-AE72-0C7F1CC3DFE9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfixToPostfix", "Stack\InfixToPostfix\InfixToPostfix.csproj", "{E6964ADC-7E4C-4FFA-8584-A37D621B9DFC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InfixToPostfix", "Stack\InfixToPostfix\InfixToPostfix.csproj", "{E6964ADC-7E4C-4FFA-8584-A37D621B9DFC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LinkedList", "LinkedList", "{ACB34DA2-6144-4392-9119-239E71D7C814}"
 EndProject
@@ -39,19 +39,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Stack", "Stack", "{8F710F37
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Recursion", "Recursion", "{9B8C7FE8-7521-4DED-9F7D-D29C36E20FCA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Factorial", "Recursion\Factorial\Factorial.csproj", "{9BFA3665-1581-4912-91E6-02BDDC0D0576}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Factorial", "Recursion\Factorial\Factorial.csproj", "{9BFA3665-1581-4912-91E6-02BDDC0D0576}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SumOfDigits", "Recursion\SumOfDigits\SumOfDigits.csproj", "{49D88E3B-8996-436B-B9A4-8064EF3FCEDF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SumOfDigits", "Recursion\SumOfDigits\SumOfDigits.csproj", "{49D88E3B-8996-436B-B9A4-8064EF3FCEDF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseConversion", "Recursion\BaseConversion\BaseConversion.csproj", "{C37ECA17-F652-4F9B-8C54-3B334A0F5992}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaseConversion", "Recursion\BaseConversion\BaseConversion.csproj", "{C37ECA17-F652-4F9B-8C54-3B334A0F5992}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exponentiation", "Recursion\Exponentiation\Exponentiation.csproj", "{4C395EF5-A897-47B7-BA28-7C78C4F9E34D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exponentiation", "Recursion\Exponentiation\Exponentiation.csproj", "{4C395EF5-A897-47B7-BA28-7C78C4F9E34D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GCDUsingEuclidsAlgorithm", "Recursion\GCDUsingEuclidsAlgorithm\GCDUsingEuclidsAlgorithm.csproj", "{34B3FD8C-0EF3-4F18-B399-64BC57EBFC89}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GCDUsingEuclidsAlgorithm", "Recursion\GCDUsingEuclidsAlgorithm\GCDUsingEuclidsAlgorithm.csproj", "{34B3FD8C-0EF3-4F18-B399-64BC57EBFC89}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FibonacciSeries", "Recursion\FibonacciSeries\FibonacciSeries.csproj", "{18FD264C-C415-45B5-B5AB-EE7DA64642EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FibonacciSeries", "Recursion\FibonacciSeries\FibonacciSeries.csproj", "{18FD264C-C415-45B5-B5AB-EE7DA64642EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TowerOfHanoi", "Recursion\TowerOfHanoi\TowerOfHanoi.csproj", "{0F274F34-46F2-44F8-9196-F3661980E1F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TowerOfHanoi", "Recursion\TowerOfHanoi\TowerOfHanoi.csproj", "{0F274F34-46F2-44F8-9196-F3661980E1F8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tree", "Tree", "{150D824D-9FBB-4D4D-BD5F-93120FE28E55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryTree", "Tree\BinaryTree\BinaryTree.csproj", "{F7F78CDD-9B37-4E51-9B4E-DB6DAC913A0A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -143,6 +147,10 @@ Global
 		{0F274F34-46F2-44F8-9196-F3661980E1F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F274F34-46F2-44F8-9196-F3661980E1F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F274F34-46F2-44F8-9196-F3661980E1F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7F78CDD-9B37-4E51-9B4E-DB6DAC913A0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7F78CDD-9B37-4E51-9B4E-DB6DAC913A0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7F78CDD-9B37-4E51-9B4E-DB6DAC913A0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7F78CDD-9B37-4E51-9B4E-DB6DAC913A0A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -169,6 +177,7 @@ Global
 		{34B3FD8C-0EF3-4F18-B399-64BC57EBFC89} = {9B8C7FE8-7521-4DED-9F7D-D29C36E20FCA}
 		{18FD264C-C415-45B5-B5AB-EE7DA64642EA} = {9B8C7FE8-7521-4DED-9F7D-D29C36E20FCA}
 		{0F274F34-46F2-44F8-9196-F3661980E1F8} = {9B8C7FE8-7521-4DED-9F7D-D29C36E20FCA}
+		{F7F78CDD-9B37-4E51-9B4E-DB6DAC913A0A} = {150D824D-9FBB-4D4D-BD5F-93120FE28E55}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A176853B-5AA9-4DAB-9B03-2D91A85D6300}
