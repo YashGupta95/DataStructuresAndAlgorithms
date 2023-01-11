@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BubbleSort
+namespace InsertionSort
 {
     internal class Program
     {
@@ -17,7 +17,7 @@ namespace BubbleSort
                 arr[i] = Convert.ToInt32(Console.ReadLine());
             }
 
-            BubbleSort(arr, size);
+            InsertionSort(arr, size);
 
             Console.WriteLine("Sorted array is : ");
             for (var i = 0; i < size; i++)
@@ -28,27 +28,22 @@ namespace BubbleSort
             Console.WriteLine();
         }
 
-        private static void BubbleSort(int[] arr, int n)
+        private static void InsertionSort(int[] arr, int n)
         {
-            int swaps;
+            int j, temp;
 
-            for (var i = n - 2; i >= 0; i--)
+            //// In each iteration, elements from 0 to (i-1) will be considered a part of sorted array
+            //// and the elements from i to (n-1) will be considered a part of unsorted array
+            for (var i = 1; i < n; i++)
             {
-                swaps = 0;
+                temp = arr[i]; //// a[i] will be first element of unsorted part
 
-                for (var j = 0; j <= i; j++)
+                for (j = i - 1; j >= 0 && arr[j] > temp; j--)
                 {
-                    if (arr[j] > arr[j + 1]) //// outer loop runs until second last element to avoid IndexOutOfBound exception at this condition
-                    {
-                        var temp = arr[j];
-                        arr[j] = arr[j + 1];
-                        arr[j + 1] = temp;
-                        swaps++;
-                    }
+                    arr[j + 1] = arr[j];
                 }
 
-                if (swaps == 0) //// no swaps in a particular pass denotes that the array has been sorted
-                    break;
+                arr[j + 1] = temp;
             }
         }
     }

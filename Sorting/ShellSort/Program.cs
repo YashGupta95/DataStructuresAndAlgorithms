@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BubbleSort
+namespace ShellSort
 {
     internal class Program
     {
@@ -17,7 +17,7 @@ namespace BubbleSort
                 arr[i] = Convert.ToInt32(Console.ReadLine());
             }
 
-            BubbleSort(arr, size);
+            ShellSort(arr, size);
 
             Console.WriteLine("Sorted array is : ");
             for (var i = 0; i < size; i++)
@@ -28,27 +28,28 @@ namespace BubbleSort
             Console.WriteLine();
         }
 
-        private static void BubbleSort(int[] arr, int n)
+        private static void ShellSort(int[] arr, int n)
         {
-            int swaps;
+            int j, temp;
 
-            for (var i = n - 2; i >= 0; i--)
+            Console.Write("Enter maximum increment(odd value) : ");
+            var h = Convert.ToInt32(Console.ReadLine());
+
+            while (h >= 1)
             {
-                swaps = 0;
-
-                for (var j = 0; j <= i; j++)
+                for (var i = h; i < n; i++)
                 {
-                    if (arr[j] > arr[j + 1]) //// outer loop runs until second last element to avoid IndexOutOfBound exception at this condition
+                    temp = arr[i];
+                    
+                    for (j = i - h; j >= 0 && arr[j] > temp; j = j - h)
                     {
-                        var temp = arr[j];
-                        arr[j] = arr[j + 1];
-                        arr[j + 1] = temp;
-                        swaps++;
+                        arr[j + h] = arr[j];
                     }
+
+                    arr[j + h] = temp;
                 }
 
-                if (swaps == 0) //// no swaps in a particular pass denotes that the array has been sorted
-                    break;
+                h -= 2;
             }
         }
     }
