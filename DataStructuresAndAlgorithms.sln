@@ -73,9 +73,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InsertionSort", "Sorting\In
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShellSort", "Sorting\ShellSort\ShellSort.csproj", "{6AC794ED-5813-4041-AE9A-35C9BDF255AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MergeSortRecursive", "Sorting\MergeSortRecursive\MergeSortRecursive.csproj", "{20643252-337E-40AC-AE0F-4B6521D13522}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MergeSortRecursive", "Sorting\MergeSortRecursive\MergeSortRecursive.csproj", "{20643252-337E-40AC-AE0F-4B6521D13522}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MergeSortIterative", "Sorting\MergeSortIterative\MergeSortIterative.csproj", "{2BDDFC22-43EA-4D11-926D-2EDCE718A79B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MergeSortIterative", "Sorting\MergeSortIterative\MergeSortIterative.csproj", "{2BDDFC22-43EA-4D11-926D-2EDCE718A79B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickSort", "Sorting\QuickSort\QuickSort.csproj", "{65825ACF-946E-4AF5-AA67-789E9B8E5EF6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -207,6 +209,10 @@ Global
 		{2BDDFC22-43EA-4D11-926D-2EDCE718A79B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2BDDFC22-43EA-4D11-926D-2EDCE718A79B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2BDDFC22-43EA-4D11-926D-2EDCE718A79B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65825ACF-946E-4AF5-AA67-789E9B8E5EF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65825ACF-946E-4AF5-AA67-789E9B8E5EF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65825ACF-946E-4AF5-AA67-789E9B8E5EF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65825ACF-946E-4AF5-AA67-789E9B8E5EF6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -243,6 +249,7 @@ Global
 		{6AC794ED-5813-4041-AE9A-35C9BDF255AB} = {66D02731-770A-4102-AB7C-A5019477DDC4}
 		{20643252-337E-40AC-AE0F-4B6521D13522} = {66D02731-770A-4102-AB7C-A5019477DDC4}
 		{2BDDFC22-43EA-4D11-926D-2EDCE718A79B} = {66D02731-770A-4102-AB7C-A5019477DDC4}
+		{65825ACF-946E-4AF5-AA67-789E9B8E5EF6} = {66D02731-770A-4102-AB7C-A5019477DDC4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A176853B-5AA9-4DAB-9B03-2D91A85D6300}
