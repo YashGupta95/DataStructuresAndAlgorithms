@@ -41,6 +41,7 @@ namespace ShellSort
                 {
                     temp = arr[i];
                     
+                    //// During each iteration of below loop, elements present at gaps of h distance will be compared & swapped (if required)
                     for (j = i - h; j >= 0 && arr[j] > temp; j = j - h)
                     {
                         arr[j + h] = arr[j];
@@ -49,7 +50,9 @@ namespace ShellSort
                     arr[j + h] = temp;
                 }
 
-                h -= 2;
+                //// Since this code was developed for training purposes, we chose a simpler incremental equation
+                //// For real-time scenarios, (h = h/2) or Knuth's rule can be implemented in place of this condition
+                h -= 2; 
             }
         }
     }

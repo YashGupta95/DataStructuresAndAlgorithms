@@ -36,7 +36,7 @@ namespace InsertionSort
             //// and the elements from i to (n-1) will be considered a part of unsorted array
             for (var i = 1; i < n; i++)
             {
-                temp = arr[i]; //// a[i] will be first element of unsorted part
+                temp = arr[i]; //// arr[i] will be first element of unsorted part
 
                 for (j = i - 1; j >= 0 && arr[j] > temp; j--)
                 {

@@ -52,13 +52,13 @@ namespace QuickSort
 
             while (i <= j)
             {
-                while (arr[i] < pivot && i < high)
+                while (arr[i] < pivot && i < high) //// The condition (i < high) is added to ensure i does not cross the bounds of array
                     i++;
 
                 while (arr[j] > pivot)
                     j--;
 
-                if (i < j) //// Swap a[i] and a[j]
+                if (i < j) //// Swap a[i] and a[j] to place the pivot element at it's right position
                 {
                     var temp = arr[i];
                     arr[i] = arr[j];

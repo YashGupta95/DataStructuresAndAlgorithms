@@ -36,13 +36,13 @@ namespace SelectionSort
             {
                 minIndex = i;
 
-                for (var j = i + 1; j < n; j++)
+                for (var j = i + 1; j < n; j++) // for each pass, find the index of smallest element
                 {
                     if (arr[j] < arr[minIndex])
                         minIndex = j;
                 }
 
-                if (i != minIndex)
+                if (i != minIndex) // if the smallest element is not at it's right place, do the swapping
                 {
                     var temp = arr[i];
                     arr[i] = arr[minIndex];

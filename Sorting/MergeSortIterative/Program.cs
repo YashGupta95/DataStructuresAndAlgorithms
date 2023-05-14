@@ -31,12 +31,12 @@ namespace MergeSortIterative
         private static void MergeSortIterative(int[] arr, int n)
         {
             var temp = new int[n];
-            var size = 1;
+            var size = 1; //// Variable 'size' denotes the size of the sublist
 
             while (size <= n - 1)
             {
                 SortPass(arr, temp, size, n);
-                size = size * 2;
+                size = size * 2; //// Size of sublists will keep increasing with each iteration
             }
         }
 
