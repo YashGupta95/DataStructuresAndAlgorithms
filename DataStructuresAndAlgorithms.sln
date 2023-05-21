@@ -79,13 +79,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MergeSortIterative", "Sorti
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickSort", "Sorting\QuickSort\QuickSort.csproj", "{65825ACF-946E-4AF5-AA67-789E9B8E5EF6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryTreeSort", "Sorting\BinaryTreeSort\BinaryTreeSort.csproj", "{00A09D8C-DFF2-4E9E-B63C-5689896E00C3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BinaryTreeSort", "Sorting\BinaryTreeSort\BinaryTreeSort.csproj", "{00A09D8C-DFF2-4E9E-B63C-5689896E00C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeapSort", "Sorting\HeapSort\HeapSort.csproj", "{49A00720-CF9E-4245-A43F-8188BB236C73}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeapSort", "Sorting\HeapSort\HeapSort.csproj", "{49A00720-CF9E-4245-A43F-8188BB236C73}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadixSort", "Sorting\RadixSort\RadixSort.csproj", "{66E55541-2D50-429D-89CA-4579AD0B4660}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RadixSort", "Sorting\RadixSort\RadixSort.csproj", "{66E55541-2D50-429D-89CA-4579AD0B4660}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddressCalculationSort", "Sorting\AddressCalculationSort\AddressCalculationSort.csproj", "{A642A3B7-9043-4768-B344-21BDBB984F4A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AddressCalculationSort", "Sorting\AddressCalculationSort\AddressCalculationSort.csproj", "{A642A3B7-9043-4768-B344-21BDBB984F4A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Searching", "Searching", "{F4E3AF36-78F3-4C4B-AA0A-7CE059CD2FC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinearSearch", "Searching\LinearSearch\LinearSearch.csproj", "{E7F5ED30-AD75-408F-96D3-35872B1F4ED6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinearSearchWithSentinel", "Searching\LinearSearchWithSentinel\LinearSearchWithSentinel.csproj", "{19250744-D72C-4DE6-80D9-2765C0394E6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinearSearchSortedList", "Searching\LinearSearchSortedList\LinearSearchSortedList.csproj", "{0976AB36-0455-452E-B790-92CDD935A0C6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -237,6 +245,18 @@ Global
 		{A642A3B7-9043-4768-B344-21BDBB984F4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A642A3B7-9043-4768-B344-21BDBB984F4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A642A3B7-9043-4768-B344-21BDBB984F4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7F5ED30-AD75-408F-96D3-35872B1F4ED6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7F5ED30-AD75-408F-96D3-35872B1F4ED6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7F5ED30-AD75-408F-96D3-35872B1F4ED6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7F5ED30-AD75-408F-96D3-35872B1F4ED6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19250744-D72C-4DE6-80D9-2765C0394E6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19250744-D72C-4DE6-80D9-2765C0394E6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19250744-D72C-4DE6-80D9-2765C0394E6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19250744-D72C-4DE6-80D9-2765C0394E6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0976AB36-0455-452E-B790-92CDD935A0C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0976AB36-0455-452E-B790-92CDD935A0C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0976AB36-0455-452E-B790-92CDD935A0C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0976AB36-0455-452E-B790-92CDD935A0C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -278,6 +298,9 @@ Global
 		{49A00720-CF9E-4245-A43F-8188BB236C73} = {66D02731-770A-4102-AB7C-A5019477DDC4}
 		{66E55541-2D50-429D-89CA-4579AD0B4660} = {66D02731-770A-4102-AB7C-A5019477DDC4}
 		{A642A3B7-9043-4768-B344-21BDBB984F4A} = {66D02731-770A-4102-AB7C-A5019477DDC4}
+		{E7F5ED30-AD75-408F-96D3-35872B1F4ED6} = {F4E3AF36-78F3-4C4B-AA0A-7CE059CD2FC4}
+		{19250744-D72C-4DE6-80D9-2765C0394E6A} = {F4E3AF36-78F3-4C4B-AA0A-7CE059CD2FC4}
+		{0976AB36-0455-452E-B790-92CDD935A0C6} = {F4E3AF36-78F3-4C4B-AA0A-7CE059CD2FC4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A176853B-5AA9-4DAB-9B03-2D91A85D6300}
