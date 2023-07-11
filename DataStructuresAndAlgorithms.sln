@@ -89,15 +89,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AddressCalculationSort", "S
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Searching", "Searching", "{F4E3AF36-78F3-4C4B-AA0A-7CE059CD2FC4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinearSearch", "Searching\LinearSearch\LinearSearch.csproj", "{E7F5ED30-AD75-408F-96D3-35872B1F4ED6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinearSearch", "Searching\LinearSearch\LinearSearch.csproj", "{E7F5ED30-AD75-408F-96D3-35872B1F4ED6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinearSearchWithSentinel", "Searching\LinearSearchWithSentinel\LinearSearchWithSentinel.csproj", "{19250744-D72C-4DE6-80D9-2765C0394E6A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinearSearchWithSentinel", "Searching\LinearSearchWithSentinel\LinearSearchWithSentinel.csproj", "{19250744-D72C-4DE6-80D9-2765C0394E6A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinearSearchSortedList", "Searching\LinearSearchSortedList\LinearSearchSortedList.csproj", "{0976AB36-0455-452E-B790-92CDD935A0C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinearSearchSortedList", "Searching\LinearSearchSortedList\LinearSearchSortedList.csproj", "{0976AB36-0455-452E-B790-92CDD935A0C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinarySearch", "Searching\BinarySearch\BinarySearch.csproj", "{9C64FD7E-1262-4AF0-B81C-7818BCEA9C0F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BinarySearch", "Searching\BinarySearch\BinarySearch.csproj", "{9C64FD7E-1262-4AF0-B81C-7818BCEA9C0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinarySearchRecursive", "Searching\BinarySearchRecursive\BinarySearchRecursive.csproj", "{3C8835DE-B723-4057-A147-E15B3E8570D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BinarySearchRecursive", "Searching\BinarySearchRecursive\BinarySearchRecursive.csproj", "{3C8835DE-B723-4057-A147-E15B3E8570D8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hashing", "Hashing", "{F1AA0F50-C1B3-4AA2-961C-86B446690263}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenAddressing", "Hashing\OpenAddressing\OpenAddressing.csproj", "{FBE3E6AB-0BD4-4B6F-AC94-0230BE69A3E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenAddressingRehashing", "Hashing\OpenAddressingRehashing\OpenAddressingRehashing.csproj", "{88F2051E-E1A0-46D9-AB79-F7E0FCCCC318}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -269,6 +275,14 @@ Global
 		{3C8835DE-B723-4057-A147-E15B3E8570D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C8835DE-B723-4057-A147-E15B3E8570D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C8835DE-B723-4057-A147-E15B3E8570D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBE3E6AB-0BD4-4B6F-AC94-0230BE69A3E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBE3E6AB-0BD4-4B6F-AC94-0230BE69A3E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBE3E6AB-0BD4-4B6F-AC94-0230BE69A3E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBE3E6AB-0BD4-4B6F-AC94-0230BE69A3E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88F2051E-E1A0-46D9-AB79-F7E0FCCCC318}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88F2051E-E1A0-46D9-AB79-F7E0FCCCC318}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88F2051E-E1A0-46D9-AB79-F7E0FCCCC318}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88F2051E-E1A0-46D9-AB79-F7E0FCCCC318}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -315,6 +329,8 @@ Global
 		{0976AB36-0455-452E-B790-92CDD935A0C6} = {F4E3AF36-78F3-4C4B-AA0A-7CE059CD2FC4}
 		{9C64FD7E-1262-4AF0-B81C-7818BCEA9C0F} = {F4E3AF36-78F3-4C4B-AA0A-7CE059CD2FC4}
 		{3C8835DE-B723-4057-A147-E15B3E8570D8} = {F4E3AF36-78F3-4C4B-AA0A-7CE059CD2FC4}
+		{FBE3E6AB-0BD4-4B6F-AC94-0230BE69A3E8} = {F1AA0F50-C1B3-4AA2-961C-86B446690263}
+		{88F2051E-E1A0-46D9-AB79-F7E0FCCCC318} = {F1AA0F50-C1B3-4AA2-961C-86B446690263}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A176853B-5AA9-4DAB-9B03-2D91A85D6300}
