@@ -18,7 +18,7 @@ namespace InfixToPostfix
         private static string InfixToPostfix(string infix)
         {
             var postfix = "";
-            var stackChar = new StackChar(20);
+            var stackChar = new StackChar(20); // For operators and parentheses (operands will be added to the postfix string directly)
 
             char next;
 

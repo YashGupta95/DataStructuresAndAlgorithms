@@ -9,16 +9,23 @@ namespace BuildHeap
             var arr1 = new int[] { int.MaxValue, 1, 4, 5, 7, 9, 10 };
             var size1 = arr1.Length - 1;
 
-            HeapifyTopDown(arr1, size1);
-
+            Console.WriteLine("Original Heap : ");
             for (var i = 1; i <= size1; i++)
                 Console.Write($"{arr1[i]} ");
+
+            HeapifyTopDown(arr1, size1);
+
+            Console.WriteLine("\nHeap after Top-Down Heapify: ");
+            for (var i = 1; i <= size1; i++)
+                Console.Write($"{arr1[i]} ");
+
 
             var arr2 = new int[] { int.MaxValue, 1, 4, 5, 7, 9, 10 };
             var size2 = arr2.Length - 1;
 
             HeapifyBottomUp(arr2, size2);
 
+            Console.WriteLine("\nHeap after Bottom-Up Heapify: ");
             for (var i = 1; i <= size2; i++)
                 Console.Write($"{arr2[i]} ");
             
