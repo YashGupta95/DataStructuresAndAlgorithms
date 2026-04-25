@@ -132,9 +132,13 @@ namespace BinarySearchTree
                     var successor = node.RightChild;
 
                     while (successor.LeftChild != null)
-                        successor = successor.LeftChild;
+                        successor = successor.LeftChild;    // Find the inorder successor (leftmost node in the right subtree)
                     
                     node.Info = successor.Info;
+                    // Delete the inorder successor from the right subtree. Since successor is the left child,
+                    // its (possible) right child is automatically reattached to its parent via the recursive return assignment.
+                    // Because successor will be deleted in left child's iteration (node.LeftChild = Delete(node.LeftChild, element);)
+                    // So the successor's child will be assigned to node.LeftChild in recursive call wind-up.
                     node.RightChild = Delete(node.RightChild, successor.Info);
                 }
                 else   //// Case B and Case A : Node to be deleted has either 1 or no child
@@ -201,6 +205,8 @@ namespace BinarySearchTree
 
             if (parent == null)                 //// Node to be deleted is the root node
                 root = child;
+            // For Case C : 'node' will be successor and 'parent' will be successor's parent.
+            // Since node is the left child of its parent, successor's child (if exists) will be re-linked to successor's parent as left child. 
             else if (node == parent.LeftChild)  //// Node is the left child of its parent
                 parent.LeftChild = child;
             else                                //// Node is the right child of its parent
