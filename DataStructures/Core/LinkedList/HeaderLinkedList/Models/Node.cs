@@ -1,4 +1,4 @@
-﻿namespace HeaderLinkedList
+﻿namespace DataStructures.Core.LinkedList.HeaderLinkedList
 {
     public class Node
     {

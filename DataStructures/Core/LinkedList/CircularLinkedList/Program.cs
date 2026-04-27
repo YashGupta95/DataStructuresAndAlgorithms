@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CircularLinkedList
+namespace DataStructures.Core.LinkedList.CircularLinkedList
 {
     internal class Program
     {

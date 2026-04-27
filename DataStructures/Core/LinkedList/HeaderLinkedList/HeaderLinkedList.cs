@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace HeaderLinkedList
+namespace DataStructures.Core.LinkedList.HeaderLinkedList
 {
     internal class HeaderLinkedList
     {

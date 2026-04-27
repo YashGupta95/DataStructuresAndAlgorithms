@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DoubleLinkedList
+namespace DataStructures.Core.LinkedList.DoubleLinkedList
 {
     internal class Program
     {

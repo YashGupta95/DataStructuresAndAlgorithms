@@ -1,4 +1,4 @@
-﻿namespace CircularLinkedList
+﻿namespace DataStructures.Core.LinkedList.SingleLinkedList
 {
     public class Node
     {

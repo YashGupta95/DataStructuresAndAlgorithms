@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SingleLinkedList
+namespace DataStructures.Core.LinkedList.SingleLinkedList
 {
     internal class Program
     {

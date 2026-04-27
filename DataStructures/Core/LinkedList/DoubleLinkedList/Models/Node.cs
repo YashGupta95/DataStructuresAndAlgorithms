@@ -1,4 +1,4 @@
-﻿namespace DoubleLinkedList
+﻿namespace DataStructures.Core.LinkedList.DoubleLinkedList
 {
     public class Node
     {
