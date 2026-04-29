@@ -1,19 +1,19 @@
 ﻿using System;
 
-namespace StackUsingArray
+namespace DataStructures.Core.Stack.InfixToPostfix
 {
-    internal class StackArray
+    internal class StackInt
     {
         private int[] stackArray;
         private int top;
 
-        public StackArray()
+        public StackInt()
         {
             stackArray = new int[10];
             top = -1;
         }
 
-        public StackArray(int maxSize)
+        public StackInt(int maxSize)
         {
             stackArray = new int[maxSize];
             top = -1;
@@ -48,13 +48,13 @@ namespace StackUsingArray
 
         internal int Pop()
         {
-            int element;
             if (IsEmpty())
             {
-                throw new InvalidOperationException("Stack Underflow!");
+                Console.WriteLine("Stack Underflow!");
+                throw new InvalidOperationException();
             }
 
-            element = stackArray[top];
+            var element = stackArray[top];
             top--;
 
             return element;
@@ -64,7 +64,8 @@ namespace StackUsingArray
         {
             if (IsEmpty())
             {
-                throw new InvalidOperationException("Stack Underflow!");
+                Console.WriteLine("Stack Underflow!");
+                throw new InvalidOperationException();
             }
 
             return stackArray[top];
@@ -72,16 +73,18 @@ namespace StackUsingArray
 
         internal void Display()
         {
+            Console.WriteLine("top= " + top);
+
             if (IsEmpty())
             {
-                Console.WriteLine("Stack is empty.");
+                Console.WriteLine("Stack is empty!");
                 return;
             }
 
             Console.WriteLine("Stack elements are : ");
             for (var i = top; i >= 0; i--)
             {
-                Console.Write($"{stackArray[i]} ");
+                Console.WriteLine(stackArray[i] + " ");
             }
 
             Console.WriteLine();

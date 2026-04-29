@@ -1,4 +1,4 @@
-﻿namespace StackUsingLinkedList
+﻿namespace DataStructures.Core.Stack.StackUsingLinkedList
 {
     public class Node
     {

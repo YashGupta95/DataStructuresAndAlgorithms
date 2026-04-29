@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace StackUsingLinkedList
+namespace DataStructures.Core.Stack.StackUsingLinkedList
 {
     internal class StackLinkedList
     {

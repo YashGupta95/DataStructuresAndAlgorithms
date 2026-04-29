@@ -1,21 +1,21 @@
 ﻿using System;
 
-namespace InfixToPostfix
+namespace DataStructures.Core.Stack.StackUsingArray
 {
-    internal class StackChar
+    internal class StackArray
     {
-        private char[] stackArray;
+        private int[] stackArray;
         private int top;
 
-        public StackChar()
+        public StackArray()
         {
-            stackArray = new char[10];
+            stackArray = new int[10];
             top = -1;
         }
 
-        public StackChar(int maxSize)
+        public StackArray(int maxSize)
         {
-            stackArray = new char[maxSize];
+            stackArray = new int[maxSize];
             top = -1;
         }
 
@@ -34,7 +34,7 @@ namespace InfixToPostfix
             return (top == stackArray.Length - 1);
         }
 
-        internal void Push(char element)
+        internal void Push(int element)
         {
             if (IsFull())
             {
@@ -46,26 +46,25 @@ namespace InfixToPostfix
             stackArray[top] = element;
         }
 
-        internal char Pop()
+        internal int Pop()
         {
+            int element;
             if (IsEmpty())
             {
-                Console.WriteLine("Stack Underflow!");
-                throw new InvalidOperationException();
+                throw new InvalidOperationException("Stack Underflow!");
             }
 
-            var element = stackArray[top];
+            element = stackArray[top];
             top--;
-            
+
             return element;
         }
 
-        internal char Peek()
+        internal int Peek()
         {
             if (IsEmpty())
             {
-                Console.WriteLine("Stack Underflow!");
-                throw new InvalidOperationException();
+                throw new InvalidOperationException("Stack Underflow!");
             }
 
             return stackArray[top];
@@ -73,18 +72,16 @@ namespace InfixToPostfix
 
         internal void Display()
         {
-            Console.WriteLine("top= " + top);
-
             if (IsEmpty())
             {
-                Console.WriteLine("Stack is empty!");
+                Console.WriteLine("Stack is empty.");
                 return;
             }
 
             Console.WriteLine("Stack elements are : ");
             for (var i = top; i >= 0; i--)
             {
-                Console.WriteLine(stackArray[i] + " ");
+                Console.Write($"{stackArray[i]} ");
             }
 
             Console.WriteLine();

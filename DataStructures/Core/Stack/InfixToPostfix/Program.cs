@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace InfixToPostfix
+namespace DataStructures.Core.Stack.InfixToPostfix
 {
     internal class Program
     {

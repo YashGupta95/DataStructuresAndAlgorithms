@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace StackUsingArray
+namespace DataStructures.Core.Stack.StackUsingArray
 {
     internal class Program
     {

@@ -1,21 +1,21 @@
 ﻿using System;
 
-namespace InfixToPostfix
+namespace DataStructures.Core.Stack.InfixToPostfix
 {
-    internal class StackInt
+    internal class StackChar
     {
-        private int[] stackArray;
+        private char[] stackArray;
         private int top;
 
-        public StackInt()
+        public StackChar()
         {
-            stackArray = new int[10];
+            stackArray = new char[10];
             top = -1;
         }
 
-        public StackInt(int maxSize)
+        public StackChar(int maxSize)
         {
-            stackArray = new int[maxSize];
+            stackArray = new char[maxSize];
             top = -1;
         }
 
@@ -34,7 +34,7 @@ namespace InfixToPostfix
             return (top == stackArray.Length - 1);
         }
 
-        internal void Push(int element)
+        internal void Push(char element)
         {
             if (IsFull())
             {
@@ -46,7 +46,7 @@ namespace InfixToPostfix
             stackArray[top] = element;
         }
 
-        internal int Pop()
+        internal char Pop()
         {
             if (IsEmpty())
             {
@@ -56,11 +56,11 @@ namespace InfixToPostfix
 
             var element = stackArray[top];
             top--;
-
+            
             return element;
         }
 
-        internal int Peek()
+        internal char Peek()
         {
             if (IsEmpty())
             {

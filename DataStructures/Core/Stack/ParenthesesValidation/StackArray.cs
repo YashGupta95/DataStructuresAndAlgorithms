@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ParenthesesValidation
+namespace DataStructures.Core.Stack.ParenthesesValidation
 {
     internal class StackArray
     {
