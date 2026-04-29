@@ -1,71 +1,54 @@
 ﻿using System;
+using DataStructures.Core.Stack;
 
-namespace DataStructures.Core.Stack.ParenthesesValidation
+namespace DataStructures.Core.Stack
 {
     internal class Program
     {
-        private static void Main(string[] args)
+        static void Main(string[] args)
         {
-            Console.Write("Enter an expression with parentheses : ");
-            var expression = Console.ReadLine();
+            bool exit = false;
 
-            if (IsValid(expression))
-                Console.WriteLine("Valid expression");
-            else
-                Console.WriteLine("Invalid expression");
-        }
-
-        private static bool IsValid(string expr)
-        {
-            var stackArray = new StackArray();
-
-            for (int i = 0; i < expr.Length; i++)
+            while (!exit)
             {
-                if (expr[i] == '(' || expr[i] == '{' || expr[i] == '[')
-                    stackArray.Push(expr[i]);
+                Console.WriteLine("\n===== Parentheses Validation =====");
+                Console.WriteLine("1. Validate Expression");
+                Console.WriteLine("0. Exit");
+                Console.Write("Enter your choice: ");
 
-                if (expr[i] == ')' || expr[i] == '}' || expr[i] == ']')
+                string choice = Console.ReadLine();
+
+                switch (choice)
                 {
-                    if (stackArray.IsEmpty())
-                    {
-                        Console.WriteLine("Right parentheses are more than left parentheses");
-                        return false;
-                    }
-                    else
-                    {
-                        var ch = stackArray.Pop();
-                        if (!MatchParentheses(ch, expr[i]))
+                    case "1":
+                        Console.Write("\nEnter expression: ");
+                        string input = Console.ReadLine();
+
+                        try
                         {
-                            Console.WriteLine("Mismatched parentheses are : ");
-                            Console.WriteLine(ch + " and " + expr[i]);
-                            return false;
+                            Console.WriteLine("\n[INFO] Validating expression...");
+                            bool isValid = ParenthesesValidator.IsValid(input);
+
+                            Console.WriteLine(isValid
+                                ? "[RESULT] Expression is BALANCED."
+                                : "[RESULT] Expression is NOT balanced.");
                         }
-                    }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine($"[ERROR] {ex.Message}");
+                        }
+                        break;
+
+                    case "0":
+                        exit = true;
+                        Console.WriteLine("[INFO] Exiting program...");
+                        break;
+
+                    default:
+                        Console.WriteLine("[ERROR] Invalid choice.");
+                        break;
                 }
             }
-
-            if (stackArray.IsEmpty())
-            {
-                Console.WriteLine("Balanced Parentheses");
-                return true;
-            }
-            else
-            {
-                Console.WriteLine("Left parentheses are more than right parentheses");
-                return false;
-            }
-        }
-
-        private static bool MatchParentheses(char char1, char char2)
-        {
-            if (char1 == '[' && char2 == ']')
-                return true;
-            if (char1 == '{' && char2 == '}')
-                return true;
-            if (char1 == '(' && char2 == ')')
-                return true;
-            
-            return false;
         }
     }
 }

@@ -1,85 +1,108 @@
 ﻿using System;
+using System.Collections.Generic;
 
-namespace DataStructures.Core.Stack.StackUsingLinkedList
+namespace DataStructures.Core.Stack
 {
-    internal class StackLinkedList
+    /// <summary>
+    /// Linked List-based implementation of a generic stack (LIFO - Last In First Out).
+    /// 
+    /// Features:
+    /// - Dynamic size (no resizing needed)
+    /// - Efficient insert/remove at head
+    /// 
+    /// Time Complexity:
+    /// Push   - O(1)
+    /// Pop    - O(1)
+    /// Peek   - O(1)
+    /// 
+    /// Space Complexity:
+    /// O(n)
+    /// </summary>
+    /// <typeparam name="T">Type of elements in the stack</typeparam>
+    public class StackLinkedList<T>
     {
-        private Node top;
+        private Node _head;
+        private int _count;
 
-        public StackLinkedList()
+        /// <summary>
+        /// Internal node representation
+        /// </summary>
+        private class Node
         {
-            top = null;
-        }
+            public T Data;
+            public Node Next;
 
-        internal int Size()
-        {
-            var size = 0;
-            var node = top;
-
-            while (node != null)
+            public Node(T data)
             {
-                node = node.Link;
-                size++;
+                Data = data;
+                Next = null;
             }
-
-            return size;
         }
 
-        internal bool IsEmpty()
-        {
-            return (top == null);
-        }
+        /// <summary>
+        /// Gets the number of elements in the stack.
+        /// </summary>
+        public int Count => _count;
 
-        internal void Push(int element)
-        {
-            var tempNode = new Node(element);
+        /// <summary>
+        /// Returns true if the stack is empty.
+        /// </summary>
+        public bool IsEmpty() => _count == 0;
 
-            tempNode.Link = top;
-            top = tempNode;
-        }
-
-        internal int Pop()
+        /// <summary>
+        /// Pushes an element onto the stack.
+        /// </summary>
+        public void Push(T item)
         {
-            int element;
-            if (IsEmpty())
+            var newNode = new Node(item)
             {
-                throw new InvalidOperationException("Stack Underflow!");
-            }
+                Next = _head
+            };
 
-            element = top.Info;
-            top = top.Link;
-
-            return element;
+            _head = newNode;
+            _count++;
         }
 
-        internal int Peek()
+        /// <summary>
+        /// Removes and returns the top element of the stack.
+        /// </summary>
+        /// <exception cref="InvalidOperationException">Thrown when stack is empty</exception>
+        public T Pop()
         {
             if (IsEmpty())
-            {
-                throw new InvalidOperationException("Stack Underflow!");
-            }
+                throw new InvalidOperationException("Stack is empty. Cannot perform Pop.");
 
-            return top.Info;
+            T value = _head.Data;
+            _head = _head.Next;
+            _count--;
+
+            return value;
         }
 
-        internal void Display()
+        /// <summary>
+        /// Returns the top element without removing it.
+        /// </summary>
+        /// <exception cref="InvalidOperationException">Thrown when stack is empty</exception>
+        public T Peek()
         {
-            var node = top;
-
             if (IsEmpty())
-            {
-                Console.WriteLine("Stack is empty.");
-                return;
-            }
+                throw new InvalidOperationException("Stack is empty. Cannot perform Peek.");
 
-            Console.WriteLine("Stack elements are : ");
-            while (node != null)
-            {
-                Console.Write($"{node.Info} ");
-                node = node.Link;
-            }
+            return _head.Data;
+        }
 
-            Console.WriteLine();
+        /// <summary>
+        /// Returns elements from top to bottom.
+        /// </summary>
+        public IEnumerable<T> GetElements()
+        {
+            var current = _head;
+
+            while (current != null)
+            {
+                yield return current.Data;
+                current = current.Next;
+            }
         }
     }
 }

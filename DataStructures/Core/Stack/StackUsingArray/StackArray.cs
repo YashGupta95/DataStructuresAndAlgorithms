@@ -1,90 +1,119 @@
 ﻿using System;
+using System.Collections.Generic;
 
-namespace DataStructures.Core.Stack.StackUsingArray
+namespace DataStructures.Core.Stack
 {
-    internal class StackArray
+    /// <summary>
+    /// Array-based implementation of a generic stack (LIFO - Last In First Out).
+    /// 
+    /// Features:
+    /// - Dynamic resizing
+    /// - Generic type support
+    /// 
+    /// Time Complexity:
+    /// Push   - O(1) amortized
+    /// Pop    - O(1)
+    /// Peek   - O(1)
+    /// 
+    /// Space Complexity:
+    /// O(n)
+    /// </summary>
+    /// <typeparam name="T">Type of elements in the stack</typeparam>
+    public class StackArray<T>
     {
-        private int[] stackArray;
-        private int top;
+        private T[] _items;
+        private int _top;
 
+        private const int DefaultCapacity = 4;
+
+        /// <summary>
+        /// Initializes a new instance of the stack with default capacity.
+        /// </summary>
         public StackArray()
         {
-            stackArray = new int[10];
-            top = -1;
+            _items = new T[DefaultCapacity];
+            _top = -1;
         }
 
-        public StackArray(int maxSize)
-        {
-            stackArray = new int[maxSize];
-            top = -1;
-        }
+        /// <summary>
+        /// Gets the number of elements in the stack.
+        /// </summary>
+        public int Count => _top + 1;
 
-        internal int Size()
-        {
-            return top + 1;
-        }
+        /// <summary>
+        /// Returns true if the stack is empty.
+        /// </summary>
+        public bool IsEmpty() => _top == -1;
 
-        internal bool IsEmpty()
+        /// <summary>
+        /// Pushes an element onto the stack.
+        /// </summary>
+        /// <param name="item">Item to be pushed</param>
+        public void Push(T item)
         {
-            return (top == -1);
-        }
-
-        internal bool IsFull()
-        {
-            return (top == stackArray.Length - 1);
-        }
-
-        internal void Push(int element)
-        {
-            if (IsFull())
+            if (_top == _items.Length - 1)
             {
-                Console.WriteLine("Stack Overflow!");
-                return;
+                Resize();
             }
 
-            top++;
-            stackArray[top] = element;
+            _items[++_top] = item;
         }
 
-        internal int Pop()
-        {
-            int element;
-            if (IsEmpty())
-            {
-                throw new InvalidOperationException("Stack Underflow!");
-            }
-
-            element = stackArray[top];
-            top--;
-
-            return element;
-        }
-
-        internal int Peek()
+        /// <summary>
+        /// Removes and returns the top element of the stack.
+        /// </summary>
+        /// <returns>Top element</returns>
+        /// <exception cref="InvalidOperationException">Thrown when stack is empty</exception>
+        public T Pop()
         {
             if (IsEmpty())
             {
-                throw new InvalidOperationException("Stack Underflow!");
+                throw new InvalidOperationException("Stack is empty. Cannot perform Pop.");
             }
 
-            return stackArray[top];
+            T item = _items[_top];
+            _items[_top] = default!; // Clear reference
+            _top--;
+
+            return item;
         }
 
-        internal void Display()
+        /// <summary>
+        /// Returns the top element without removing it.
+        /// </summary>
+        /// <returns>Top element</returns>
+        /// <exception cref="InvalidOperationException">Thrown when stack is empty</exception>
+        public T Peek()
         {
             if (IsEmpty())
             {
-                Console.WriteLine("Stack is empty.");
-                return;
+                throw new InvalidOperationException("Stack is empty. Cannot perform Peek.");
             }
 
-            Console.WriteLine("Stack elements are : ");
-            for (var i = top; i >= 0; i--)
+            return _items[_top];
+        }
+
+        /// <summary>
+        /// Returns elements from top to bottom.
+        /// </summary>
+        public IEnumerable<T> GetElements()
+        {
+            for (int i = _top; i >= 0; i--)
             {
-                Console.Write($"{stackArray[i]} ");
+                yield return _items[i];
             }
+        }
 
-            Console.WriteLine();
+        /// <summary>
+        /// Doubles the capacity of the internal array.
+        /// </summary>
+        private void Resize()
+        {
+            int newCapacity = _items.Length * 2;
+            T[] newArray = new T[newCapacity];
+
+            Array.Copy(_items, newArray, _items.Length);
+            _items = newArray;
         }
     }
 }

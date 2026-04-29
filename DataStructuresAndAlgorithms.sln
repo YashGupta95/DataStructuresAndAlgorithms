@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.1.32421.90
+# Visual Studio Version 18
+VisualStudioVersion = 18.5.11723.231 stable
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SingleLinkedList", "DataStructures\Core\LinkedList\SingleLinkedList\SingleLinkedList.csproj", "{77322573-E129-4C61-B72F-A6696833D7C0}"
 EndProject
@@ -106,6 +106,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenAddressingRehashing", "Hashing\OpenAddressingRehashing\OpenAddressingRehashing.csproj", "{88F2051E-E1A0-46D9-AB79-F7E0FCCCC318}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeparateChaining", "Hashing\SeparateChaining\SeparateChaining.csproj", "{473AF05A-6852-42FB-985C-E4A373021B27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostfixEvaluation", "DataStructures\Core\Stack\PostfixEvaluation\PostfixEvaluation.csproj", "{7B3CAE95-251F-4881-B272-AEB4FC9CEFD4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -289,6 +291,10 @@ Global
 		{473AF05A-6852-42FB-985C-E4A373021B27}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{473AF05A-6852-42FB-985C-E4A373021B27}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{473AF05A-6852-42FB-985C-E4A373021B27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B3CAE95-251F-4881-B272-AEB4FC9CEFD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B3CAE95-251F-4881-B272-AEB4FC9CEFD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B3CAE95-251F-4881-B272-AEB4FC9CEFD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B3CAE95-251F-4881-B272-AEB4FC9CEFD4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -338,6 +344,7 @@ Global
 		{FBE3E6AB-0BD4-4B6F-AC94-0230BE69A3E8} = {F1AA0F50-C1B3-4AA2-961C-86B446690263}
 		{88F2051E-E1A0-46D9-AB79-F7E0FCCCC318} = {F1AA0F50-C1B3-4AA2-961C-86B446690263}
 		{473AF05A-6852-42FB-985C-E4A373021B27} = {F1AA0F50-C1B3-4AA2-961C-86B446690263}
+		{7B3CAE95-251F-4881-B272-AEB4FC9CEFD4} = {8F710F37-10F3-4CAB-8FED-E8DDB8C5CD83}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A176853B-5AA9-4DAB-9B03-2D91A85D6300}

@@ -10,8 +10,8 @@ namespace DataStructures.Core.Stack
 
             while (!exit)
             {
-                Console.WriteLine("\n===== Infix to Postfix Converter =====");
-                Console.WriteLine("1. Convert Expression");
+                Console.WriteLine("\n===== Postfix Expression Evaluation =====");
+                Console.WriteLine("1. Evaluate Expression");
                 Console.WriteLine("0. Exit");
                 Console.Write("Enter your choice: ");
 
@@ -20,15 +20,15 @@ namespace DataStructures.Core.Stack
                 switch (choice)
                 {
                     case "1":
-                        Console.Write("\nEnter infix expression: ");
+                        Console.Write("\nEnter postfix expression: ");
                         string input = Console.ReadLine();
 
                         try
                         {
-                            Console.WriteLine("\n[INFO] Processing expression...");
-                            string postfix = ExpressionConverter.InfixToPostfix(input);
+                            Console.WriteLine("\n[INFO] Evaluating expression...");
+                            int result = DataStructures.Core.Stack.PostfixEvaluator.Evaluate(input);
 
-                            Console.WriteLine($"[RESULT] Postfix Expression: {postfix}");
+                            Console.WriteLine($"[RESULT] Evaluation Result: {result}");
                         }
                         catch (Exception ex)
                         {

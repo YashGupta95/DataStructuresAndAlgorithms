@@ -1,57 +1,102 @@
 ﻿using System;
 
-namespace DataStructures.Core.Stack.StackUsingArray
+namespace DataStructures.Core.Stack
 {
     internal class Program
     {
-        private static void Main(string[] args)
+        static void Main(string[] args)
         {
-            int data;
-            var stackArray = new StackArray(8);
+            var stack = new StackArray<int>();
+            bool exit = false;
 
-            while (true)
+            while (!exit)
             {
-                Console.WriteLine("------------------------------------------------------------------------");
-                Console.WriteLine("1. Push an element on the stack");
-                Console.WriteLine("2. Pop an element from the stack");
-                Console.WriteLine("3. Display the top element");
-                Console.WriteLine("4. Display all stack elements");
-                Console.WriteLine("5. Display size of the stack");
-                Console.WriteLine("6. Quit");
-                Console.WriteLine("------------------------------------------------------------------------");
-                
-                Console.Write("Enter your choice : ");
-                var choice = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("\n===== Stack (Array Implementation) =====");
+                Console.WriteLine("1. Push");
+                Console.WriteLine("2. Pop");
+                Console.WriteLine("3. Peek");
+                Console.WriteLine("4. Display Stack");
+                Console.WriteLine("5. Count");
+                Console.WriteLine("6. Is Empty");
+                Console.WriteLine("0. Exit");
+                Console.Write("Enter your choice: ");
 
-                if (choice == 6)
-                    break;
+                string input = Console.ReadLine();
 
-                switch (choice)
+                switch (input)
                 {
-                    case 1:
-                        Console.Write("Enter the element to be pushed : ");
-                        data = Convert.ToInt32(Console.ReadLine());
-                        stackArray.Push(data);
+                    case "1":
+                        Console.Write("Enter value to push: ");
+                        if (int.TryParse(Console.ReadLine(), out int value))
+                        {
+                            stack.Push(value);
+                            Console.WriteLine($"[INFO] {value} pushed onto stack.");
+                        }
+                        else
+                        {
+                            Console.WriteLine("[ERROR] Invalid input.");
+                        }
                         break;
-                    case 2:
-                        data = stackArray.Pop();
-                        Console.WriteLine($"Popped element is : {data}");
+
+                    case "2":
+                        try
+                        {
+                            int popped = stack.Pop();
+                            Console.WriteLine($"[INFO] Popped element: {popped}");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine($"[ERROR] {ex.Message}");
+                        }
                         break;
-                    case 3:
-                        Console.WriteLine($"Element at the top is : {stackArray.Peek()}");
+
+                    case "3":
+                        try
+                        {
+                            int top = stack.Peek();
+                            Console.WriteLine($"[INFO] Top element: {top}");
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine($"[ERROR] {ex.Message}");
+                        }
                         break;
-                    case 4:
-                        stackArray.Display();
+
+                    case "4":
+                        Console.WriteLine("\n[INFO] Stack elements (Top → Bottom):");
+
+                        if (stack.IsEmpty())
+                        {
+                            Console.WriteLine("[INFO] Stack is empty.");
+                        }
+                        else
+                        {
+                            foreach (var item in stack.GetElements())
+                            {
+                                Console.WriteLine($" -> {item}");
+                            }
+                        }
                         break;
-                    case 5:
-                        Console.WriteLine($"Size of stack is: {stackArray.Size()}");
+
+                    case "5":
+                        Console.WriteLine($"[INFO] Stack count: {stack.Count}");
                         break;
+
+                    case "6":
+                        Console.WriteLine(stack.IsEmpty()
+                            ? "[INFO] Stack is EMPTY."
+                            : "[INFO] Stack is NOT empty.");
+                        break;
+
+                    case "0":
+                        exit = true;
+                        Console.WriteLine("[INFO] Exiting program...");
+                        break;
+
                     default:
-                        Console.WriteLine("Invalid choice");
+                        Console.WriteLine("[ERROR] Invalid choice. Try again.");
                         break;
                 }
-
-                Console.WriteLine("");
             }
         }
     }
