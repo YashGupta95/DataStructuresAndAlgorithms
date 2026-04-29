@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PriorityQueue
+namespace DataStructures.Core.Queue.PriorityQueue
 {
     internal class Program
     {

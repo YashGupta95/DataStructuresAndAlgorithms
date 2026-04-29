@@ -1,9 +1,10 @@
 ﻿using System;
 
-namespace PriorityQueue
+namespace DataStructures.Core.Queue.PriorityQueue
 {
     /// <summary>
     /// Priority Queue has been implemented using Sorted Linked Lists (that is sorted based on Priority)
+    /// It can also be implemented using Heap data structure (Binary Heap, Binomial Heap, Fibonacci Heap) for better time complexity of insertion and deletion operations.
     /// </summary>
     internal class PriorityQueue
     {

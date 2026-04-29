@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace QueueUsingArray
+namespace DataStructures.Core.Queue.QueueUsingArray
 {
     internal class QueueArray
     {

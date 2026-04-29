@@ -15,17 +15,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StackUsingArray", "DataStru
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StackUsingLinkedList", "DataStructures\Core\Stack\StackUsingLinkedList\StackUsingLinkedList.csproj", "{F0CDBFDC-1194-4671-A78E-7CF100E6869F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueueUsingArray", "Queue\QueueUsingArray\QueueUsingArray.csproj", "{BE1D6F2A-E7BF-4C11-84FE-4EF8EE2A9D47}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueueUsingArray", "DataStructures\Core\Queue\QueueUsingArray\QueueUsingArray.csproj", "{BE1D6F2A-E7BF-4C11-84FE-4EF8EE2A9D47}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueueUsingLinkedList", "Queue\QueueUsingLinkedList\QueueUsingLinkedList.csproj", "{8E47624D-1116-418B-8E3F-9A25884BA424}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueueUsingLinkedList", "DataStructures\Core\Queue\QueueUsingLinkedList\QueueUsingLinkedList.csproj", "{8E47624D-1116-418B-8E3F-9A25884BA424}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueueUsingCircularLinkedList", "Queue\QueueUsingCircularLinkedList\QueueUsingCircularLinkedList.csproj", "{D765C6FE-AB4D-4597-9027-DBAE79A0B0C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueueUsingCircularLinkedList", "DataStructures\Core\Queue\QueueUsingCircularLinkedList\QueueUsingCircularLinkedList.csproj", "{D765C6FE-AB4D-4597-9027-DBAE79A0B0C9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CircularQueue", "Queue\CircularQueue\CircularQueue.csproj", "{59244972-EE05-48F0-A7D0-C180411C884C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CircularQueue", "DataStructures\Core\Queue\CircularQueue\CircularQueue.csproj", "{59244972-EE05-48F0-A7D0-C180411C884C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DequeUsingArray", "Queue\DequeUsingArray\DequeUsingArray.csproj", "{69B94541-C09E-4F3B-A56B-65FAEB4E182A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DequeUsingArray", "DataStructures\Core\Queue\DequeUsingArray\DequeUsingArray.csproj", "{69B94541-C09E-4F3B-A56B-65FAEB4E182A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PriorityQueue", "Queue\PriorityQueue\PriorityQueue.csproj", "{0E17CD9A-71E0-4874-B907-EAC0117E243D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PriorityQueue", "DataStructures\Core\Queue\PriorityQueue\PriorityQueue.csproj", "{0E17CD9A-71E0-4874-B907-EAC0117E243D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParenthesesValidation", "DataStructures\Core\Stack\ParenthesesValidation\ParenthesesValidation.csproj", "{05EB3FED-2B5D-4659-AE72-0C7F1CC3DFE9}"
 EndProject

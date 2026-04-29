@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CircularQueue
+namespace DataStructures.Core.Queue.CircularQueue
 {
     internal class CircularQueue
     {

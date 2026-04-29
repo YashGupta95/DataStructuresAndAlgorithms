@@ -1,14 +1,12 @@
-﻿namespace PriorityQueue
+﻿namespace DataStructures.Core.Queue.QueueUsingLinkedList
 {
     public class Node
     {
-        public int Priority;
         public int Info;
         public Node Link;
 
-        public Node(int info, int priority)
+        public Node(int info)
         {
-            Priority = priority;
             Info = info;
             Link = null;
         }

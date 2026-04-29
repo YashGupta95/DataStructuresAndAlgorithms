@@ -1,4 +1,4 @@
-﻿namespace QueueUsingLinkedList
+﻿namespace DataStructures.Core.Queue.QueueUsingCircularLinkedList
 {
     public class Node
     {

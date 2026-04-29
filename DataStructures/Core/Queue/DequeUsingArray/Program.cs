@@ -1,22 +1,23 @@
 ﻿using System;
 
-namespace QueueUsingLinkedList
+namespace DataStructures.Core.Queue.DequeUsingArray
 {
     internal class Program
     {
         private static void Main(string[] args)
         {
             int data;
-            var queueLinkedList = new QueueLinkedList();
+
+            var dequeArray = new DequeArray(8);
 
             while (true)
             {
                 Console.WriteLine("------------------------------------------------------------------------");
-                Console.WriteLine("1. Insert an element in the queue");
-                Console.WriteLine("2. Delete an element from the queue");
-                Console.WriteLine("3. Display element at the front");
-                Console.WriteLine("4. Display all elements of the queue");
-                Console.WriteLine("5. Display size of the queue");
+                Console.WriteLine("1. Insert an element at the front end");
+                Console.WriteLine("2. Insert an element at the rear end");
+                Console.WriteLine("3. Delete an element from front end");
+                Console.WriteLine("4. Delete an element from rear end");
+                Console.WriteLine("5. Display all elements of deque");
                 Console.WriteLine("6. Quit");
                 Console.WriteLine("------------------------------------------------------------------------");
 
@@ -31,27 +32,26 @@ namespace QueueUsingLinkedList
                     case 1:
                         Console.Write("Enter the element to be inserted : ");
                         data = Convert.ToInt32(Console.ReadLine());
-                        queueLinkedList.Insert(data);
+                        dequeArray.InsertFront(data);
                         break;
                     case 2:
-                        data = queueLinkedList.Delete();
-                        Console.WriteLine($"Element deleted is : {data}");
+                        Console.Write("Enter the element to be inserted : ");
+                        data = Convert.ToInt32(Console.ReadLine());
+                        dequeArray.InsertRear(data);
                         break;
                     case 3:
-                        Console.WriteLine($"Element at the front is : {queueLinkedList.Peek()}");
+                        Console.WriteLine($"Element deleted from front end is: {dequeArray.DeleteFront()}");
                         break;
                     case 4:
-                        queueLinkedList.Display();
+                        Console.WriteLine($"Element deleted from rear end is: {dequeArray.DeleteRear()}");
                         break;
                     case 5:
-                        Console.WriteLine($"Size of queue is: {queueLinkedList.Size()}");
+                        dequeArray.Display();
                         break;
                     default:
-                        Console.WriteLine("Invalid choice!");
+                        Console.WriteLine("Invalid choice");
                         break;
                 }
-
-                Console.WriteLine();
             }
         }
     }

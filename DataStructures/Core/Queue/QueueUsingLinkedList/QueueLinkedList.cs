@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace QueueUsingLinkedList
+namespace DataStructures.Core.Queue.QueueUsingLinkedList
 {
     /// <summary>
     /// This Linked List implementation of Queue uses something known as Double-ended Linked Lists, where we maintain the reference to both first and last nodes

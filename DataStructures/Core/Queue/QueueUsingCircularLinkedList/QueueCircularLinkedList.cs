@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace QueueUsingCircularLinkedList
+namespace DataStructures.Core.Queue.QueueUsingCircularLinkedList
 {
     internal class QueueCircularLinkedList
     {

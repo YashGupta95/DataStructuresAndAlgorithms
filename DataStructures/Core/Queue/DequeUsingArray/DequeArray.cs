@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DequeUsingArray
+namespace DataStructures.Core.Queue.DequeUsingArray
 {
     internal class DequeArray
     {

@@ -1,14 +1,13 @@
 ﻿using System;
 
-namespace CircularQueue
+namespace DataStructures.Core.Queue.QueueUsingArray
 {
     internal class Program
     {
         private static void Main(string[] args)
         {
             int data;
-
-            var circularQueue = new CircularQueue(8);
+            var queueArray = new QueueArray(8);
 
             while (true)
             {
@@ -30,22 +29,22 @@ namespace CircularQueue
                 switch (choice)
                 {
                     case 1:
-                        Console.Write("Enter the element to be inserted: ");
+                        Console.Write("Enter the element to be inserted : ");
                         data = Convert.ToInt32(Console.ReadLine());
-                        circularQueue.Insert(data);
+                        queueArray.Insert(data);
                         break;
                     case 2:
-                        data = circularQueue.Delete();
-                        Console.WriteLine($"Element deleted is: {data}");
+                        data = queueArray.Delete();
+                        Console.WriteLine($"Element deleted is : {data}");
                         break;
                     case 3:
-                        Console.WriteLine($"Element at the front is: {circularQueue.Peek()}");
+                        Console.WriteLine($"Element at the front is : {queueArray.Peek()}");
                         break;
                     case 4:
-                        circularQueue.Display();
+                        queueArray.Display();
                         break;
                     case 5:
-                        Console.WriteLine($"Size of queue is: {circularQueue.Size()}");
+                        Console.WriteLine($"Size of queue is: {queueArray.Size()}");
                         break;
                     default:
                         Console.WriteLine("Invalid choice!");
