@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BinarySearchTree
+namespace DataStructures.Trees.BinarySearchTree
 {
     internal class BinarySearchTree
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Heap
+namespace DataStructures.Trees.Heap.Heap
 {
     internal class Program
     {

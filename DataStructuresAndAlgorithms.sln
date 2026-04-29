@@ -55,13 +55,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TowerOfHanoi", "Recursion\T
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tree", "Tree", "{150D824D-9FBB-4D4D-BD5F-93120FE28E55}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BinaryTree", "Tree\BinaryTree\BinaryTree.csproj", "{F7F78CDD-9B37-4E51-9B4E-DB6DAC913A0A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BinaryTree", "DataStructures\Trees\BinaryTree\BinaryTree.csproj", "{F7F78CDD-9B37-4E51-9B4E-DB6DAC913A0A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BinarySearchTree", "Tree\BinarySearchTree\BinarySearchTree.csproj", "{124BAE49-B7C2-48A5-99CD-50F4FA09125E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BinarySearchTree", "DataStructures\Trees\BinarySearchTree\BinarySearchTree.csproj", "{124BAE49-B7C2-48A5-99CD-50F4FA09125E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Heap", "Tree\Heap\Heap.csproj", "{E5015813-2C01-418D-A4AC-E1ACE1A7FB3B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Heap", "DataStructures\Trees\Heap\Heap\Heap.csproj", "{E5015813-2C01-418D-A4AC-E1ACE1A7FB3B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuildHeap", "Tree\BuildHeap\BuildHeap.csproj", "{CBCA2C6B-8824-431C-A6D2-16F92A765C08}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuildHeap", "DataStructures\Trees\Heap\BuildHeap\BuildHeap.csproj", "{CBCA2C6B-8824-431C-A6D2-16F92A765C08}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sorting", "Sorting", "{66D02731-770A-4102-AB7C-A5019477DDC4}"
 EndProject

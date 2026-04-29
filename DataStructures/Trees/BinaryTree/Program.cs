@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BinaryTree
+namespace DataStructures.Trees.BinaryTree
 {
     internal class Program
     {

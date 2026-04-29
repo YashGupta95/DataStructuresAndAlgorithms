@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Heap
+namespace DataStructures.Trees.Heap.Heap
 {
     /// <summary>
     /// The below code sample has been implemented for a Max Heap. The respective conditions can be reversed for a Min Heap implementation
