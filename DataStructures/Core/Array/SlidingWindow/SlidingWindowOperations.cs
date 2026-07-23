@@ -47,14 +47,14 @@ namespace DataStructures.Core.Array
             if (arr == null || arr.Length < k || k <= 0)
                 throw new ArgumentException("Invalid input.");
 
-            int windowSum = 0;
+            var windowSum = 0;
 
-            for (int i = 0; i < k; i++)
+            for (var i = 0; i < k; i++)
                 windowSum += arr[i];
 
-            int maxSum = windowSum;
+            var maxSum = windowSum;
 
-            for (int i = k; i < arr.Length; i++)
+            for (var i = k; i < arr.Length; i++)
             {
                 windowSum += arr[i];
                 windowSum -= arr[i - k];
@@ -82,11 +82,11 @@ namespace DataStructures.Core.Array
         /// Space Complexity: O(1)
         public static int SmallestSubarrayWithGivenSum(int[] arr, int target)
         {
-            int left = 0;
-            int windowSum = 0;
-            int minLength = int.MaxValue;
+            var left = 0;
+            var windowSum = 0;
+            var minLength = int.MaxValue;
 
-            for (int right = 0; right < arr.Length; right++)
+            for (var right = 0; right < arr.Length; right++)
             {
                 windowSum += arr[right];
 
@@ -123,10 +123,10 @@ namespace DataStructures.Core.Array
 
             var window = new HashSet<char>(); // To track unique characters in the current window
 
-            int left = 0;
-            int maxLength = 0;
+            var left = 0;
+            var maxLength = 0;
 
-            for (int right = 0; right < str.Length; right++)
+            for (var right = 0; right < str.Length; right++)
             {
                 while (window.Contains(str[right]))
                 {
@@ -157,11 +157,11 @@ namespace DataStructures.Core.Array
         /// Space Complexity: O(1)
         public static int MaxConsecutiveOnesAfterFlippingKZeros(int[] nums, int k)
         {
-            int left = 0;
-            int zeros = 0;
-            int maxLength = 0;
+            var left = 0;
+            var zeros = 0;
+            var maxLength = 0;
 
-            for (int right = 0; right < nums.Length; right++)
+            for (var right = 0; right < nums.Length; right++)
             {
                 if (nums[right] == 0)
                     zeros++;
