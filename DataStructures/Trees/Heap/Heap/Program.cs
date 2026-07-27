@@ -6,41 +6,30 @@ namespace DataStructures.Trees.Heap.Heap
     {
         private static void Main(string[] args)
         {
-            var heap = new Heap(20);
+            Console.WriteLine("==============================================================");
+            Console.WriteLine("                   HEAP DEMONSTRATION");
+            Console.WriteLine("==============================================================");
 
-            while (true)
+            var heap = new HeapOperations(20);
+            var values = new[] { 10, 20, 15, 30, 25, 5 };
+
+            Console.WriteLine("Building a sample max-heap with values: " + string.Join(", ", values));
+            foreach (var value in values)
             {
-                Console.WriteLine("------------------------------------------------------------------------");
-                Console.WriteLine("1. Insert a node in Heap");
-                Console.WriteLine("2. Delete root");
-                Console.WriteLine("3. Display the Heap");
-                Console.WriteLine("4. Exit");
-                Console.WriteLine("------------------------------------------------------------------------");
-
-                Console.Write("Enter your choice : ");
-                var choice = Convert.ToInt32(Console.ReadLine());
-
-                if (choice == 4)
-                    break;
-
-                switch (choice)
-                {
-                    case 1:
-                        Console.Write("Enter the value to be inserted : ");
-                        var value = Convert.ToInt32(Console.ReadLine());
-                        heap.Insert(value);
-                        break;
-                    case 2:
-                        Console.WriteLine($"Maximum value is {heap.DeleteRoot()}");
-                        break;
-                    case 3:
-                        heap.Display();
-                        break;
-                    default:
-                        Console.WriteLine("Invalid choice");
-                        break;
-                }
+                heap.Insert(value);
             }
+
+            Console.WriteLine("\nHeap after insertions:");
+            heap.Display();
+
+            Console.WriteLine("\nDeleting root...");
+            Console.WriteLine($"Maximum value removed: {heap.DeleteRoot()}");
+
+            Console.WriteLine("\nHeap after delete root:");
+            heap.Display();
+
+            Console.WriteLine("\nPress any key to exit...");
+            Console.ReadKey();
         }
     }
 }

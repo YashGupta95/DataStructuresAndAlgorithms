@@ -6,99 +6,36 @@ namespace DataStructures.Trees.Heap.BuildHeap
     {
         private static void Main(string[] args)
         {
-            var arr1 = new int[] { int.MaxValue, 1, 4, 5, 7, 9, 10 };
-            var size1 = arr1.Length - 1;
+            var originalValues = new[] { int.MaxValue, 1, 4, 5, 7, 9, 10 };
+            var topDownValues = (int[])originalValues.Clone();
+            var bottomUpValues = (int[])originalValues.Clone();
 
-            Console.WriteLine("Original Heap : ");
-            for (var i = 1; i <= size1; i++)
-                Console.Write($"{arr1[i]} ");
+            Console.WriteLine("==============================================================");
+            Console.WriteLine("        BUILD-HEAP DEMONSTRATION (TOP-DOWN vs BOTTOM-UP)");
+            Console.WriteLine("==============================================================");
+            Console.WriteLine("Original array (using index 1 as the root):");
+            PrintArray(topDownValues, 1);
 
-            HeapifyTopDown(arr1, size1);
+            BuildHeapOperations.HeapifyTopDown(topDownValues, topDownValues.Length - 1);
+            Console.WriteLine("\nAfter Top-Down Heapify:");
+            PrintArray(topDownValues, 1);
 
-            Console.WriteLine("\nHeap after Top-Down Heapify: ");
-            for (var i = 1; i <= size1; i++)
-                Console.Write($"{arr1[i]} ");
+            BuildHeapOperations.HeapifyBottomUp(bottomUpValues, bottomUpValues.Length - 1);
+            Console.WriteLine("\nAfter Bottom-Up Heapify:");
+            PrintArray(bottomUpValues, 1);
 
-
-            var arr2 = new int[] { int.MaxValue, 1, 4, 5, 7, 9, 10 };
-            var size2 = arr2.Length - 1;
-
-            HeapifyBottomUp(arr2, size2);
-
-            Console.WriteLine("\nHeap after Bottom-Up Heapify: ");
-            for (var i = 1; i <= size2; i++)
-                Console.Write($"{arr2[i]} ");
-            
-            _ = Convert.ToInt32(Console.ReadLine()); //// To stop window
+            Console.WriteLine("\nPress any key to exit...");
+            Console.ReadKey();
         }
 
-        private static void HeapifyTopDown(int[] arr, int size)
+        private static void PrintArray(int[] arr, int startIndex)
         {
-            for (var i = 2; i <= size; i++)
+            for (var i = startIndex; i < arr.Length; i++)
             {
-                RestoreUp(i, arr);
-            }
-        }
-
-        private static void HeapifyBottomUp(int[] arr, int size)
-        {
-            for (var i = size / 2; i >= 1; i--)
-            {
-                RestoreDown(i, arr, size);
-            }
-        }
-
-        private static void RestoreUp(int index, int[] arr)
-        {
-            var value = arr[index];
-            int parentIndex = index / 2;
-
-            while (arr[parentIndex] < value)
-            {
-                arr[index] = arr[parentIndex];
-                index = parentIndex;
-                parentIndex = index / 2;
+                Console.Write(arr[i] + " ");
             }
 
-            arr[index] = value;
-        }
-
-        private static void RestoreDown(int index, int[] arr, int size)
-        {
-            var value = arr[index];
-            var leftChildIndex = 2 * index;
-            var rightChildIndex = leftChildIndex + 1;
-
-            while (rightChildIndex <= size)
-            {
-                if (value >= arr[leftChildIndex] && value >= arr[rightChildIndex])
-                {
-                    arr[index] = value;
-                    return;
-                }
-                else if (arr[leftChildIndex] > arr[rightChildIndex])
-                {
-                    arr[index] = arr[leftChildIndex];
-                    index = leftChildIndex;
-                }
-                else
-                {
-                    arr[index] = arr[rightChildIndex];
-                    index = rightChildIndex;
-                }
-
-                leftChildIndex = 2 * index;
-                rightChildIndex = leftChildIndex + 1;
-            }
-
-            //// If the number of nodes is even
-            if (leftChildIndex == size && value < arr[leftChildIndex])
-            {
-                arr[index] = arr[leftChildIndex];
-                index = leftChildIndex;
-            }
-
-            arr[index] = value;
+            Console.WriteLine();
         }
     }
 }
