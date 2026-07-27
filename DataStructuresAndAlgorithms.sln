@@ -141,6 +141,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LookupProblems", "DataStruc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SetOperations", "DataStructures\Core\HashMap\SetOperations\SetOperations.csproj", "{1E361258-B9CC-4696-9E40-78B6B0E12BD0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AVLTree", "DataStructures\Trees\AVLTree\AVLTree.csproj", "{A5009E83-43F7-4B38-8D77-69862D2CA96F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -379,6 +381,10 @@ Global
 		{1E361258-B9CC-4696-9E40-78B6B0E12BD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E361258-B9CC-4696-9E40-78B6B0E12BD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E361258-B9CC-4696-9E40-78B6B0E12BD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5009E83-43F7-4B38-8D77-69862D2CA96F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5009E83-43F7-4B38-8D77-69862D2CA96F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5009E83-43F7-4B38-8D77-69862D2CA96F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5009E83-43F7-4B38-8D77-69862D2CA96F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -442,6 +448,7 @@ Global
 		{7FBAA5D0-9798-494B-9573-A49CFBA5A59D} = {67A1E532-87FD-40E9-B1AB-0998D5CD553F}
 		{6F956CB3-3EAC-4334-9A8D-0600F83DA240} = {67A1E532-87FD-40E9-B1AB-0998D5CD553F}
 		{1E361258-B9CC-4696-9E40-78B6B0E12BD0} = {67A1E532-87FD-40E9-B1AB-0998D5CD553F}
+		{A5009E83-43F7-4B38-8D77-69862D2CA96F} = {150D824D-9FBB-4D4D-BD5F-93120FE28E55}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A176853B-5AA9-4DAB-9B03-2D91A85D6300}
