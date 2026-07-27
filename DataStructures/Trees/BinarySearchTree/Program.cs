@@ -10,7 +10,7 @@ namespace DataStructures.Trees.BinarySearchTree
             Console.WriteLine("                BINARY SEARCH TREE DEMONSTRATION");
             Console.WriteLine("==============================================================");
 
-            var bst = new BinarySearchTree();
+            var bst = new BinarySearchTreeOperations();
             var sampleValues = new[] { 50, 30, 70, 20, 40, 60, 80 };
 
             Console.WriteLine("Building a sample tree with values: " + string.Join(", ", sampleValues));
@@ -25,7 +25,7 @@ namespace DataStructures.Trees.BinarySearchTree
             Console.ReadKey();
         }
 
-        private static void DemonstrateOperations(BinarySearchTree bst)
+        private static void DemonstrateOperations(BinarySearchTreeOperations bst)
         {
             Console.WriteLine("\n==============================================================");
             Console.WriteLine("1. Display Tree");

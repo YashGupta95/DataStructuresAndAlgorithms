@@ -9,7 +9,7 @@ namespace DataStructures.Trees.BinaryTree
     /// <remarks>
     /// This implementation uses level-order insertion to create a complete binary tree structure for demonstration. Traversal methods return lists to separate algorithm behavior from I/O.
     /// </remarks>
-    internal class BinaryTree
+    internal class BinaryTreeOperations
     {
         private BinaryTreeNode root;
 
@@ -18,7 +18,7 @@ namespace DataStructures.Trees.BinaryTree
         /// </summary>
         public BinaryTreeNode Root => root;
 
-        public BinaryTree()
+        public BinaryTreeOperations()
         {
             root = null;
         }

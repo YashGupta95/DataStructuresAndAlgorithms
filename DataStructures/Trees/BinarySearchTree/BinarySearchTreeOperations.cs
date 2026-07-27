@@ -2,11 +2,11 @@
 
 namespace DataStructures.Trees.BinarySearchTree
 {
-    internal class BinarySearchTree
+    internal class BinarySearchTreeOperations
     {
         private Node root;
 
-        public BinarySearchTree()
+        public BinarySearchTreeOperations()
         {
             root = null;
         }

@@ -25,7 +25,7 @@ namespace DataStructures.Trees.BinaryTree
             Console.WriteLine("1. Build and Traverse a Binary Tree");
             Console.WriteLine("==============================================================");
 
-            var tree = new BinaryTree();
+            var tree = new BinaryTreeOperations();
             tree.CreateTree();
 
             Console.WriteLine("Binary Tree Structure:");
@@ -46,7 +46,7 @@ namespace DataStructures.Trees.BinaryTree
             Console.WriteLine("2. Search");
             Console.WriteLine("==============================================================");
 
-            var tree = new BinaryTree();
+            var tree = new BinaryTreeOperations();
             tree.CreateTree();
 
             var searchValue = 40;
@@ -62,7 +62,7 @@ namespace DataStructures.Trees.BinaryTree
             Console.WriteLine("3. Delete");
             Console.WriteLine("==============================================================");
 
-            var tree = new BinaryTree();
+            var tree = new BinaryTreeOperations();
             tree.CreateTree();
 
             Console.WriteLine($"Initial Level-Order: [{string.Join(", ", tree.LevelOrder())}]");
@@ -85,7 +85,7 @@ namespace DataStructures.Trees.BinaryTree
             Console.WriteLine("4. Clear and Empty Check");
             Console.WriteLine("==============================================================");
 
-            var tree = new BinaryTree();
+            var tree = new BinaryTreeOperations();
             tree.CreateTree();
             tree.Clear();
 
