@@ -6,87 +6,62 @@ namespace DataStructures.Trees.BinarySearchTree
     {
         private static void Main(string[] args)
         {
+            Console.WriteLine("==============================================================");
+            Console.WriteLine("                BINARY SEARCH TREE DEMONSTRATION");
+            Console.WriteLine("==============================================================");
+
             var bst = new BinarySearchTree();
-            int data;
+            var sampleValues = new[] { 50, 30, 70, 20, 40, 60, 80 };
 
-            while (true)
+            Console.WriteLine("Building a sample tree with values: " + string.Join(", ", sampleValues));
+            foreach (var value in sampleValues)
             {
-                Console.WriteLine("------------------------------------------------------------------------");
-                Console.WriteLine("1. Display Binary Search Tree");
-                Console.WriteLine("2. Search a node in BST");
-                Console.WriteLine("3. Insert a new node");
-                Console.WriteLine("4. Delete a node");
-                Console.WriteLine("5. Preorder Traversal");
-                Console.WriteLine("6. Inorder Traversal");
-                Console.WriteLine("7. Postorder Traversal");
-                Console.WriteLine("8. Height of tree");
-                Console.WriteLine("9. Find Minimum key");
-                Console.WriteLine("10. Find Maximum key");
-                Console.WriteLine("11. Quit");
-                Console.WriteLine("------------------------------------------------------------------------");
-
-                Console.Write("Enter your choice : ");
-                var choice = Convert.ToInt32(Console.ReadLine());
-
-                if (choice == 11)
-                    break;
-
-                switch (choice)
-                {
-                    case 1:
-                        bst.Display();
-                        break;
-                    case 2:
-                        Console.Write("Enter the key to be searched : ");
-                        data = Convert.ToInt32(Console.ReadLine());
-
-                        if (bst.RecursiveSearch(data))
-                            Console.WriteLine("Key found");
-                        else
-                            Console.WriteLine("Key not found");
-
-                        //if (bst.IterativeSearch(data))
-                        //    Console.WriteLine("Key found");
-                        //else
-                        //    Console.WriteLine("Key not found");
-                        break;
-                    case 3:
-                        Console.Write("Enter the key to be inserted : ");
-                        data = Convert.ToInt32(Console.ReadLine());
-                        bst.InsertRecursive(data);
-                        //bst.InsertIterative(data);
-                        break;
-                    case 4:
-                        Console.Write("Enter the key to be deleted : ");
-                        data = Convert.ToInt32(Console.ReadLine());
-                        bst.DeleteRecursive(data);
-                        //bst.DeleteIterative(data);
-                        break;
-                    case 5:
-                        bst.Preorder();
-                        break;
-                    case 6:
-                        bst.Inorder();
-                        break;
-                    case 7:
-                        bst.Postorder();
-                        break;
-                    case 8:
-                        Console.WriteLine($"Height of tree is: {bst.Height()}");
-                        break;
-                    case 9:
-                        Console.WriteLine($"Minimum key is: {bst.FindMinRecursive()}");
-                        //Console.WriteLine($"Minimum key is: {bst.FindMinIterative()}");
-                        break;
-                    case 10:
-                        Console.WriteLine($"Maximum key is: {bst.FindMaxRecursive()}");
-                        //Console.WriteLine($"Maximum key is: {bst.FindMaxIterative()}");
-                        break;
-                    default:
-                        Console.WriteLine("Invalid choice!");
-                        break;
-                }
+                bst.InsertRecursive(value);
             }
+
+            DemonstrateOperations(bst);
+
+            Console.WriteLine("\nPress any key to exit...");
+            Console.ReadKey();
+        }
+
+        private static void DemonstrateOperations(BinarySearchTree bst)
+        {
+            Console.WriteLine("\n==============================================================");
+            Console.WriteLine("1. Display Tree");
+            Console.WriteLine("==============================================================");
+            bst.Display();
+
+            Console.WriteLine("\n==============================================================");
+            Console.WriteLine("2. Search Operations");
+            Console.WriteLine("==============================================================");
+            Console.WriteLine($"Recursive search for 40: {bst.RecursiveSearch(40)}");
+            Console.WriteLine($"Iterative search for 90: {bst.IterativeSearch(90)}");
+
+            Console.WriteLine("\n==============================================================");
+            Console.WriteLine("3. Traversals");
+            Console.WriteLine("==============================================================");
+            Console.WriteLine("Preorder: ");
+            bst.Preorder();
+            Console.WriteLine("Inorder: ");
+            bst.Inorder();
+            Console.WriteLine("Postorder: ");
+            bst.Postorder();
+
+            Console.WriteLine("\n==============================================================");
+            Console.WriteLine("4. Tree Properties");
+            Console.WriteLine("==============================================================");
+            Console.WriteLine($"Height: {bst.Height()}");
+            Console.WriteLine($"Minimum key: {bst.FindMinRecursive()}");
+            Console.WriteLine($"Maximum key: {bst.FindMaxRecursive()}");
+
+            Console.WriteLine("\n==============================================================");
+            Console.WriteLine("5. Delete Operation");
+            Console.WriteLine("==============================================================");
+            bst.DeleteRecursive(30);
+            Console.WriteLine("Deleted 30 recursively.");
+            Console.WriteLine("Binary Search Tree after deletion: ");
+            bst.Display();
         }
     }
 }

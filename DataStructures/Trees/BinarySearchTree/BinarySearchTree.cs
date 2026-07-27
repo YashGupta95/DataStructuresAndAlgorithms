@@ -11,12 +11,43 @@ namespace DataStructures.Trees.BinarySearchTree
             root = null;
         }
 
+        /// <summary>
+        /// Checks whether the binary search tree contains any nodes.
+        /// </summary>
+        /// <remarks>
+        /// This is a constant-time check using the root reference.
+        /// </remarks>
+        /// <returns>True if the tree is empty; otherwise, false.</returns>
+        /// <b>Time Complexity</b>
+        /// <para> O(1) </para>
+        ///
+        /// <b>Space Complexity</b>
+        /// <para> O(1) </para>
         internal bool IsEmpty()
         {
             return (root == null);
         }
 
         #region Insert a node in BST
+        /// <summary>
+        /// Inserts a value into the binary search tree using recursion.
+        /// </summary>
+        /// <remarks>
+        /// The insertion follows the BST property: values less than the current node go to the left, while values greater than the current node go to the right.
+        /// </remarks>
+        /// <example>
+        /// <code>
+        /// var tree = new BinarySearchTree();
+        /// tree.InsertRecursive(50);
+        /// tree.InsertRecursive(30);
+        /// </code>
+        /// </example>
+        /// <param name="element">The value to insert.</param>
+        /// <b>Time Complexity</b>
+        /// <para> O(h) </para>
+        ///
+        /// <b>Space Complexity</b>
+        /// <para> O(h) </para>
         internal void InsertRecursive(int element)
         {
             root = Insert(root, element);
@@ -36,6 +67,15 @@ namespace DataStructures.Trees.BinarySearchTree
             return node;
         }
 
+        /// <summary>
+        /// Inserts a value into the binary search tree using iteration.
+        /// </summary>
+        /// <param name="element">The value to insert.</param>
+        /// <b>Time Complexity</b>
+        /// <para> O(h) </para>
+        ///
+        /// <b>Space Complexity</b>
+        /// <para> O(1) </para>
         internal void InsertIterative(int element)
         {
             var node = root;
@@ -68,6 +108,16 @@ namespace DataStructures.Trees.BinarySearchTree
         #endregion
 
         #region Searching a node in BST
+        /// <summary>
+        /// Searches for a value in the tree using recursion.
+        /// </summary>
+        /// <param name="element">The value to search for.</param>
+        /// <returns>True if the value is found; otherwise, false.</returns>
+        /// <b>Time Complexity</b>
+        /// <para> O(h) </para>
+        ///
+        /// <b>Space Complexity</b>
+        /// <para> O(h) </para>
         internal bool RecursiveSearch(int element)
         {
             return (Search(root, element) != null);
@@ -75,18 +125,31 @@ namespace DataStructures.Trees.BinarySearchTree
 
         private static Node Search(Node node, int element)
         {
-            if (node == null) //// Key not found
+            // Key not found
+            if (node == null)
                 return null; 
 
-            if (element < node.Info) //// Search in left subtree
+            // Search in left subtree
+            if (element < node.Info)
                 return Search(node.LeftChild, element);
 
-            if (element > node.Info) //// Search in right subtree
+            // Search in right subtree
+            if (element > node.Info)
                 return Search(node.RightChild, element);
 
             return node;
         }
 
+        /// <summary>
+        /// Searches for a value in the tree using iteration.
+        /// </summary>
+        /// <param name="element">The value to search for.</param>
+        /// <returns>True if the value is found; otherwise, false.</returns>
+        /// <b>Time Complexity</b>
+        /// <para> O(h) </para>
+        ///
+        /// <b>Space Complexity</b>
+        /// <para> O(1) </para>
         internal bool IterativeSearch(int element)
         {
             var node = root;
@@ -94,9 +157,9 @@ namespace DataStructures.Trees.BinarySearchTree
             while (node != null)
             {
                 if (element < node.Info)
-                    node = node.LeftChild; //// Move to left child
+                    node = node.LeftChild; // Move to left child
                 else if (element > node.Info)
-                    node = node.RightChild;  //// Move to right child
+                    node = node.RightChild;  // Move to right child
                 else
                     return true;
             }
@@ -106,6 +169,19 @@ namespace DataStructures.Trees.BinarySearchTree
         #endregion
 
         #region Deleting a node from BST
+        /// <summary>
+        /// Deletes a value from the tree using recursion.
+        /// </summary>
+        /// <remarks>
+        /// The method handles three cases: leaf node, node with one child, and node with two children.
+        /// When a node has two children, the inorder successor is used to maintain BST properties.
+        /// </remarks>
+        /// <param name="element">The value to delete.</param>
+        /// <b>Time Complexity</b>
+        /// <para> O(h) </para>
+        ///
+        /// <b>Space Complexity</b>
+        /// <para> O(h) </para>
         internal void DeleteRecursive(int element)
         {
             root = Delete(root, element);
@@ -121,18 +197,25 @@ namespace DataStructures.Trees.BinarySearchTree
                 return node;
             }
 
-            if (element < node.Info)                                    //// Node will be found and deleted from left subtree
+            // Node will be found and deleted from left subtree
+            if (element < node.Info)
                 node.LeftChild = Delete(node.LeftChild, element);
-            else if (element > node.Info)                               //// Node will be found and deleted from left subtree
+            // Node will be found and deleted from left subtree
+            else if (element > node.Info)
                 node.RightChild = Delete(node.RightChild, element);
-            else                                                        //// Key to be deleted is found
+            // Key to be deleted is found
+            else
             {
-                if (node.LeftChild != null && node.RightChild != null)  //// Case C: Node to be deleted has 2 children
+                // Case C: Node to be deleted has 2 children
+                if (node.LeftChild != null && node.RightChild != null)
                 {
                     var successor = node.RightChild;
 
                     while (successor.LeftChild != null)
-                        successor = successor.LeftChild;    // Find the inorder successor (leftmost node in the right subtree)
+                    {
+                        // Find the inorder successor (leftmost node in the right subtree)
+                        successor = successor.LeftChild;
+                    }
                     
                     node.Info = successor.Info;
                     // Delete the inorder successor from the right subtree. Since successor is the left child,
@@ -141,11 +224,14 @@ namespace DataStructures.Trees.BinarySearchTree
                     // So the successor's child will be assigned to node.LeftChild in recursive call wind-up.
                     node.RightChild = Delete(node.RightChild, successor.Info);
                 }
-                else   //// Case B and Case A : Node to be deleted has either 1 or no child
+                // Case B and Case A : Node to be deleted has either 1 or no child
+                else
                 {
-                    if (node.LeftChild != null) //// Node has only left child
+                    // Node has only left child
+                    if (node.LeftChild != null)
                         child = node.LeftChild;
-                    else                        //// Node has only right child or no child
+                    // Node has only right child or no child
+                    else
                         child = node.RightChild;
 
                     node = child;
@@ -155,6 +241,15 @@ namespace DataStructures.Trees.BinarySearchTree
             return node;
         }
 
+        /// <summary>
+        /// Deletes a value from the tree using iteration.
+        /// </summary>
+        /// <param name="element">The value to delete.</param>
+        /// <b>Time Complexity</b>
+        /// <para> O(h) </para>
+        ///
+        /// <b>Space Complexity</b>
+        /// <para> O(1) </para>
         internal void DeleteIterative(int element)
         {
             var node = root;
@@ -178,7 +273,7 @@ namespace DataStructures.Trees.BinarySearchTree
                 return;
             }
 
-            //// Case C: Node to be deleted has 2 children - Find the inorder successor and its parent
+            // Case C: Node to be deleted has 2 children - Find the inorder successor and its parent
             if (node.LeftChild != null && node.RightChild != null)
             {
                 var successorParent = node;
@@ -195,26 +290,38 @@ namespace DataStructures.Trees.BinarySearchTree
                 parent = successorParent;
             }
 
-            //// Case B and Case A : Node to be deleted has either 1 or no child
+            // Case B and Case A : Node to be deleted has either 1 or no child
             Node child;
 
-            if (node.LeftChild != null)         //// Node to be deleted has a left child
+            // Node to be deleted has a left child
+            if (node.LeftChild != null)
                 child = node.LeftChild;
-            else                                //// Node to be deleted has a right child or no child
+            // Node to be deleted has a right child or no child
+            else
                 child = node.RightChild;
 
-            if (parent == null)                 //// Node to be deleted is the root node
+            // Node to be deleted is the root node
+            if (parent == null)
                 root = child;
             // For Case C : 'node' will be successor and 'parent' will be successor's parent.
             // Since node is the left child of its parent, successor's child (if exists) will be re-linked to successor's parent as left child. 
-            else if (node == parent.LeftChild)  //// Node is the left child of its parent
+            else if (node == parent.LeftChild)  // Node is the left child of its parent
                 parent.LeftChild = child;
-            else                                //// Node is the right child of its parent
+            else                                // Node is the right child of its parent
                 parent.RightChild = child;
         }
         #endregion
 
         #region Find the node with minimum key
+        /// <summary>
+        /// Finds the minimum value in the tree using recursion.
+        /// </summary>
+        /// <returns>The minimum value stored in the tree.</returns>
+        /// <b>Time Complexity</b>
+        /// <para> O(h) </para>
+        ///
+        /// <b>Space Complexity</b>
+        /// <para> O(h) </para>
         internal int FindMinRecursive()
         {
             if (IsEmpty())
@@ -231,6 +338,15 @@ namespace DataStructures.Trees.BinarySearchTree
             return FindMin(node.LeftChild);
         }
 
+        /// <summary>
+        /// Finds the minimum value in the tree using iteration.
+        /// </summary>
+        /// <returns>The minimum value stored in the tree.</returns>
+        /// <b>Time Complexity</b>
+        /// <para> O(h) </para>
+        ///
+        /// <b>Space Complexity</b>
+        /// <para> O(1) </para>
         internal int FindMinIterative()
         {
             if (IsEmpty())
@@ -246,6 +362,15 @@ namespace DataStructures.Trees.BinarySearchTree
         #endregion
 
         #region Find the node with maximum key
+        /// <summary>
+        /// Finds the maximum value in the tree using recursion.
+        /// </summary>
+        /// <returns>The maximum value stored in the tree.</returns>
+        /// <b>Time Complexity</b>
+        /// <para> O(h) </para>
+        ///
+        /// <b>Space Complexity</b>
+        /// <para> O(h) </para>
         internal int FindMaxRecursive()
         {
             if (IsEmpty())
@@ -262,6 +387,15 @@ namespace DataStructures.Trees.BinarySearchTree
             return FindMax(node.RightChild);
         }
 
+        /// <summary>
+        /// Finds the maximum value in the tree using iteration.
+        /// </summary>
+        /// <returns>The maximum value stored in the tree.</returns>
+        /// <b>Time Complexity</b>
+        /// <para> O(h) </para>
+        ///
+        /// <b>Space Complexity</b>
+        /// <para> O(1) </para>
         internal int FindMaxIterative()
         {
             if (IsEmpty())
@@ -277,6 +411,17 @@ namespace DataStructures.Trees.BinarySearchTree
         #endregion
 
         #region Display a BST
+        /// <summary>
+        /// Displays the tree structure in a visual format.
+        /// </summary>
+        /// <remarks>
+        /// The output is useful for understanding the shape of the tree.
+        /// </remarks>
+        /// <b>Time Complexity</b>
+        /// <para> O(n) </para>
+        ///
+        /// <b>Space Complexity</b>
+        /// <para> O(h) </para>
         internal void Display()
         {
             Display(root, 0);
@@ -300,6 +445,14 @@ namespace DataStructures.Trees.BinarySearchTree
         #endregion
 
         #region Preorder Traversal
+        /// <summary>
+        /// Performs a pre-order traversal of the tree.
+        /// </summary>
+        /// <b>Time Complexity</b>
+        /// <para> O(n) </para>
+        ///
+        /// <b>Space Complexity</b>
+        /// <para> O(h) </para>
         internal void Preorder()
         {
             Preorder(root);
@@ -318,6 +471,14 @@ namespace DataStructures.Trees.BinarySearchTree
         #endregion
 
         #region Inorder Traversal
+        /// <summary>
+        /// Performs an in-order traversal of the tree.
+        /// </summary>
+        /// <b>Time Complexity</b>
+        /// <para> O(n) </para>
+        ///
+        /// <b>Space Complexity</b>
+        /// <para> O(h) </para>
         internal void Inorder()
         {
             Inorder(root);
@@ -336,6 +497,14 @@ namespace DataStructures.Trees.BinarySearchTree
         #endregion
 
         #region Postorder Traversal
+        /// <summary>
+        /// Performs a post-order traversal of the tree.
+        /// </summary>
+        /// <b>Time Complexity</b>
+        /// <para> O(n) </para>
+        ///
+        /// <b>Space Complexity</b>
+        /// <para> O(h) </para>
         internal void Postorder()
         {
             Postorder(root);
@@ -354,6 +523,18 @@ namespace DataStructures.Trees.BinarySearchTree
         #endregion
 
         #region Finding the height of BST
+        /// <summary>
+        /// Returns the height of the tree.
+        /// </summary>
+        /// <remarks>
+        /// The height is the number of nodes on the longest path from the root to a leaf.
+        /// </remarks>
+        /// <returns>The height of the tree.</returns>
+        /// <b>Time Complexity</b>
+        /// <para> O(n) </para>
+        ///
+        /// <b>Space Complexity</b>
+        /// <para> O(h) </para>
         internal int Height()
         {
             return Height(root);
