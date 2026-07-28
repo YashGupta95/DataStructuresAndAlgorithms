@@ -2,6 +2,40 @@ using System;
 
 namespace DataStructures.Trees.Heap.BuildHeap
 {
+    // "Build heap" is the problem of converting an arbitrary array of n values into a valid
+    // Binary Heap (see the Heap project for the full definition). There are two standard ways to
+    // do it, and the difference in running time is a classic result in algorithm analysis.
+    //
+    // -----------------------------------------------------------------------
+    // Strategy 1: Top-Down (Repeated Insertion)
+    // -----------------------------------------------------------------------
+    // Start with an empty heap. Insert each element one at a time using the normal heap Insert
+    // operation, which "sifts up" the new value to its correct position.
+    //
+    //     for i from 1 to n:  insert(a[i])
+    //
+    // Cost: each insert is O(log n) in the worst case, giving O(n log n) overall.
+    //
+    // -----------------------------------------------------------------------
+    // Strategy 2: Bottom-Up (Floyd's Heapify)
+    // -----------------------------------------------------------------------
+    // Treat the input array as if it were already a complete binary tree (which it is, by shape).
+    // Starting from the LAST INTERNAL node (index n/2) and walking backward toward the root,
+    // "sift down" each node so that its subtree becomes a valid heap.
+    //
+    //     for i from n/2 down to 1:  siftDown(i)
+    //
+    // Cost: although each individual siftDown is O(log n), most of the work happens near the
+    // leaves where subtrees are shallow. A tight analysis shows the total cost is O(n) — LINEAR
+    // in the number of elements.
+    //
+    // -----------------------------------------------------------------------
+    // When to Use Which
+    // -----------------------------------------------------------------------
+    //   • If elements arrive one at a time (streaming), you have no choice — use INSERT.
+    //   • If all n elements are known up front (e.g., inside heap sort), use Floyd's heapify to
+    //     get the O(n) win.
+    // =============================================================================================
     /// <summary>
     /// Provides helper methods for building a max-heap from an array using different strategies.
     /// </summary>

@@ -3,9 +3,52 @@ using System.Collections.Generic;
 
 namespace DataStructures.Trees.BinaryTree
 {
-    /// <summary>
-    /// Represents a binary tree with integer values and provides traversal, insertion, search, and deletion operations for learning purposes.
-    /// </summary>
+    // A Binary Tree is a hierarchical data structure in which every node has AT MOST two children,
+    // conventionally called the LEFT child and the RIGHT child. Unlike a Binary Search Tree, a
+    // plain Binary Tree does NOT impose any ordering on the values — it is purely a shape.
+    //
+    // Binary Trees are the foundation on which many other tree data structures are built:
+    // Binary Search Trees, AVL Trees, Red-Black Trees, and Heaps are all specialized Binary Trees
+    // with extra rules layered on top.
+    //
+    // -----------------------------------------------------------------------
+    // Common Terminology
+    // -----------------------------------------------------------------------
+    //   • ROOT      — the topmost node; the only one with no parent.
+    //   • LEAF      — a node with no children.
+    //   • INTERNAL  — a node with at least one child.
+    //   • HEIGHT    — the length of the longest path from a node down to a leaf.
+    //   • DEPTH     — the length of the path from the root down to a node.
+    //   • LEVEL     — depth + 1 (root is at level 1).
+    //   • COMPLETE  — every level is fully filled except possibly the last, which is filled from
+    //                  the left. This implementation builds complete binary trees via level-order
+    //                  insertion.
+    //   • FULL      — every internal node has exactly two children.
+    //   • PERFECT   — full AND every leaf is at the same depth.
+    //
+    // -----------------------------------------------------------------------
+    // Traversals
+    // -----------------------------------------------------------------------
+    // Because a Binary Tree has no ordering, walking it in a well-defined order is a common task.
+    // There are four standard traversals:
+    //
+    //   • IN-ORDER    — Left, Root, Right    (depth-first)
+    //   • PRE-ORDER   — Root, Left, Right    (depth-first)
+    //   • POST-ORDER  — Left, Right, Root    (depth-first)
+    //   • LEVEL-ORDER — visit every node at depth d before any node at depth d+1
+    //                   (breadth-first; uses a queue).
+    //
+    // -----------------------------------------------------------------------
+    // Time and Space
+    // -----------------------------------------------------------------------
+    // For a Binary Tree with n nodes:
+    //   • Traversals — O(n) time, O(h) space where h is the height.
+    //   • Height h   — ranges from ⌈log₂(n+1)⌉ (perfect) up to n (degenerate "vine" of only
+    //                  left or only right children).
+    //
+    // Because a general Binary Tree can degenerate into a line, most data-structure use cases
+    // rely on one of its balanced descendants (BST, AVL, RB) rather than the plain form.
+    // =============================================================================================
     /// <remarks>
     /// This implementation uses level-order insertion to create a complete binary tree structure for demonstration. Traversal methods return lists to separate algorithm behavior from I/O.
     /// </remarks>

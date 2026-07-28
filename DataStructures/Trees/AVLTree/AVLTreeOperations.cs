@@ -1,5 +1,57 @@
 ﻿namespace DataStructures.Trees.AVLTree
 {
+    // An AVL Tree (named after its inventors Adelson-Velsky and Landis) is a self-balancing Binary
+    // Search Tree (BST). It was the first data structure of its kind to guarantee O(log n) height
+    // for search, insertion, and deletion by tracking one extra piece of information per node:
+    // the node's "height" (the length of the longest path down to a leaf).
+    //
+    // -----------------------------------------------------------------------
+    // The AVL Balance Property
+    // -----------------------------------------------------------------------
+    // For every node in the tree, the balance factor
+    //
+    //     balance = height(left subtree) - height(right subtree)
+    //
+    // must be one of { -1, 0, +1 }. Any node whose balance factor is +2 or -2 is "unbalanced" and
+    // must be repaired using a rotation before the operation completes. Because balance is
+    // restored after every insertion and deletion, the tree height stays within O(log n) at all
+    // times.
+    //
+    // -----------------------------------------------------------------------
+    // The Four Rotation Cases
+    // -----------------------------------------------------------------------
+    // When a node becomes unbalanced, exactly one of the following cases applies. The name comes
+    // from the direction taken during the FIRST two steps down from the unbalanced node toward
+    // the newly inserted (or newly promoted) key.
+    //
+    //   • LL (Left-Left)   — heavy on the left, extends further left.  Fixed by 1 RIGHT rotation.
+    //   • RR (Right-Right) — heavy on the right, extends further right. Fixed by 1 LEFT rotation.
+    //   • LR (Left-Right)  — heavy on the left, extends to the right.  Fixed by LEFT then RIGHT.
+    //   • RL (Right-Left)  — heavy on the right, extends to the left.  Fixed by RIGHT then LEFT.
+    //
+    // Each rotation is a local O(1) restructuring that preserves the BST ordering.
+    //
+    // -----------------------------------------------------------------------
+    // Insertion vs. Deletion — Key Differences
+    // -----------------------------------------------------------------------
+    //   • Insertion needs at most ONE rotation to restore balance. The rotation case can be
+    //     identified using the newly inserted value (that's how Insert() picks a case here).
+    //   • Deletion may need multiple rotations, one at each ancestor on the way up. The case can
+    //     no longer be determined from the deleted value alone, so Delete() examines the balance
+    //     factor of the child subtree instead.
+    //
+    // -----------------------------------------------------------------------
+    // Comparison With Other Balanced Trees
+    // -----------------------------------------------------------------------
+    //   • AVL Trees maintain a STRICTER balance than Red-Black Trees, so searches are slightly
+    //     faster (shorter paths).
+    //   • Red-Black Trees allow a looser balance, so insertions and deletions typically perform
+    //     fewer rotations on average.
+    //   • Both offer O(log n) worst-case time for search, insert, and delete.
+    //
+    // AVL Trees are a natural choice when reads dominate writes — for example in-memory indexes
+    // that are queried far more often than they are modified.
+    // =============================================================================================
     internal class AVLTreeOperations
     {
         /// <summary>

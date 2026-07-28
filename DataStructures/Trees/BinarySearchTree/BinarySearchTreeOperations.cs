@@ -2,6 +2,46 @@
 
 namespace DataStructures.Trees.BinarySearchTree
 {
+    // A Binary Search Tree is a Binary Tree that enforces an ordering rule on its keys, which
+    // makes it possible to look up any value by comparing it against a small number of nodes
+    // rather than scanning the whole collection.
+    //
+    // -----------------------------------------------------------------------
+    // The BST Ordering Property
+    // -----------------------------------------------------------------------
+    // For every node N in the tree:
+    //
+    //   • Every value in the LEFT subtree of N is LESS THAN N's value.
+    //   • Every value in the RIGHT subtree of N is GREATER THAN N's value.
+    //   • Duplicate values are typically disallowed (this implementation ignores duplicates).
+    //
+    // A useful consequence: an IN-ORDER traversal of a BST produces the keys in ascending
+    // sorted order.
+    //
+    // -----------------------------------------------------------------------
+    // Core Operations
+    // -----------------------------------------------------------------------
+    //   • SEARCH — compare with the root; recurse left if the target is smaller, right if larger.
+    //   • INSERT — walk down as if searching; attach the new node where the search would have
+    //              ended (at a null child).
+    //   • DELETE — three cases:
+    //       1. Leaf node          — just detach it.
+    //       2. One child          — replace the node with its only child.
+    //       3. Two children       — replace the node's VALUE with its in-order successor (the
+    //                               smallest key in the right subtree) and delete the successor.
+    //
+    // -----------------------------------------------------------------------
+    // Time Complexity — And Its Achilles' Heel
+    // -----------------------------------------------------------------------
+    // Every operation runs in O(h) time, where h is the height of the tree.
+    //   • Best case  — h ≈ log₂(n) when the tree is balanced. Operations are O(log n).
+    //   • Worst case — h = n       when the tree degenerates into a sorted linked list
+    //                              (e.g., inserting keys 1, 2, 3, 4, … in order). All operations
+    //                              degrade to O(n).
+    //
+    // This worst case is exactly what SELF-BALANCING BSTs — AVL Trees and Red-Black Trees —
+    // are designed to prevent by re-shaping the tree after every insertion and deletion.
+    // =============================================================================================
     internal class BinarySearchTreeOperations
     {
         private Node root;
