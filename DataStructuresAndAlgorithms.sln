@@ -155,6 +155,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AdvancedTrees", "AdvancedTr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SegmentTree", "DataStructures\AdvancedTrees\SegmentTree\SegmentTree.csproj", "{A1F413CF-3145-4367-ACFD-0469C95F6CF9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FenwickTree", "DataStructures\AdvancedTrees\FenwickTree\FenwickTree.csproj", "{F52EDBD1-B737-4763-825E-5733C2D5F3D1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AdvancedTrees", "AdvancedTrees", "{231469A2-F31D-8F2D-588E-2A41323063DB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -909,6 +913,18 @@ Global
 		{A1F413CF-3145-4367-ACFD-0469C95F6CF9}.Release|x64.Build.0 = Release|Any CPU
 		{A1F413CF-3145-4367-ACFD-0469C95F6CF9}.Release|x86.ActiveCfg = Release|Any CPU
 		{A1F413CF-3145-4367-ACFD-0469C95F6CF9}.Release|x86.Build.0 = Release|Any CPU
+		{F52EDBD1-B737-4763-825E-5733C2D5F3D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F52EDBD1-B737-4763-825E-5733C2D5F3D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F52EDBD1-B737-4763-825E-5733C2D5F3D1}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F52EDBD1-B737-4763-825E-5733C2D5F3D1}.Debug|x64.Build.0 = Debug|Any CPU
+		{F52EDBD1-B737-4763-825E-5733C2D5F3D1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F52EDBD1-B737-4763-825E-5733C2D5F3D1}.Debug|x86.Build.0 = Debug|Any CPU
+		{F52EDBD1-B737-4763-825E-5733C2D5F3D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F52EDBD1-B737-4763-825E-5733C2D5F3D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F52EDBD1-B737-4763-825E-5733C2D5F3D1}.Release|x64.ActiveCfg = Release|Any CPU
+		{F52EDBD1-B737-4763-825E-5733C2D5F3D1}.Release|x64.Build.0 = Release|Any CPU
+		{F52EDBD1-B737-4763-825E-5733C2D5F3D1}.Release|x86.ActiveCfg = Release|Any CPU
+		{F52EDBD1-B737-4763-825E-5733C2D5F3D1}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -985,6 +1001,7 @@ Global
 		{E3531155-2CAA-467F-BAD9-E777F0FD50E1} = {CA8FB1CF-147C-1344-5B60-F767119A6C81}
 		{192750B4-4742-6783-89B8-CCB3F5744591} = {1654A5C2-BB5E-4103-E184-43BDD6421756}
 		{A1F413CF-3145-4367-ACFD-0469C95F6CF9} = {192750B4-4742-6783-89B8-CCB3F5744591}
+		{F52EDBD1-B737-4763-825E-5733C2D5F3D1} = {192750B4-4742-6783-89B8-CCB3F5744591}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A176853B-5AA9-4DAB-9B03-2D91A85D6300}
