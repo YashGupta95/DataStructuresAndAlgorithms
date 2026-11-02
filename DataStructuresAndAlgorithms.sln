@@ -165,6 +165,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graph", "DataStructures\Gra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DisjointSetUnion", "DataStructures\GraphStructures\DisjointSetUnion\DisjointSetUnion.csproj", "{CD31A44C-C61F-47D7-8F0F-430FCC7BF5C3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdgeList", "DataStructures\GraphStructures\EdgeList\EdgeList.csproj", "{C4996D9D-F6AA-4859-A248-A293855985CC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -955,6 +957,18 @@ Global
 		{CD31A44C-C61F-47D7-8F0F-430FCC7BF5C3}.Release|x64.Build.0 = Release|Any CPU
 		{CD31A44C-C61F-47D7-8F0F-430FCC7BF5C3}.Release|x86.ActiveCfg = Release|Any CPU
 		{CD31A44C-C61F-47D7-8F0F-430FCC7BF5C3}.Release|x86.Build.0 = Release|Any CPU
+		{C4996D9D-F6AA-4859-A248-A293855985CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4996D9D-F6AA-4859-A248-A293855985CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4996D9D-F6AA-4859-A248-A293855985CC}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C4996D9D-F6AA-4859-A248-A293855985CC}.Debug|x64.Build.0 = Debug|Any CPU
+		{C4996D9D-F6AA-4859-A248-A293855985CC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C4996D9D-F6AA-4859-A248-A293855985CC}.Debug|x86.Build.0 = Debug|Any CPU
+		{C4996D9D-F6AA-4859-A248-A293855985CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4996D9D-F6AA-4859-A248-A293855985CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4996D9D-F6AA-4859-A248-A293855985CC}.Release|x64.ActiveCfg = Release|Any CPU
+		{C4996D9D-F6AA-4859-A248-A293855985CC}.Release|x64.Build.0 = Release|Any CPU
+		{C4996D9D-F6AA-4859-A248-A293855985CC}.Release|x86.ActiveCfg = Release|Any CPU
+		{C4996D9D-F6AA-4859-A248-A293855985CC}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1035,6 +1049,7 @@ Global
 		{DFB92A4D-9155-AD66-2CF0-9729AD086DA9} = {1654A5C2-BB5E-4103-E184-43BDD6421756}
 		{6BDBB3D1-1547-474D-B304-E545CA68DFD8} = {DFB92A4D-9155-AD66-2CF0-9729AD086DA9}
 		{CD31A44C-C61F-47D7-8F0F-430FCC7BF5C3} = {DFB92A4D-9155-AD66-2CF0-9729AD086DA9}
+		{C4996D9D-F6AA-4859-A248-A293855985CC} = {DFB92A4D-9155-AD66-2CF0-9729AD086DA9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A176853B-5AA9-4DAB-9B03-2D91A85D6300}
