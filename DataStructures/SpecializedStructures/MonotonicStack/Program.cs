@@ -44,7 +44,8 @@ namespace DataStructures.SpecializedStructures.MonotonicStack
             Console.WriteLine("==============================================================");
 
             Console.WriteLine("\nOperation Performed:");
-            Console.WriteLine("• Push every value as value@index onto a decreasing, non-strict stack.");
+            Console.WriteLine("• Push every value onto a decreasing, non-strict stack. Entries show as");
+            Console.WriteLine("  value (i=index).");
             Console.WriteLine("• Before each push, every smaller value on top is evicted. The incoming");
             Console.WriteLine("  value is the NEXT GREATER of everything it evicts.");
             Console.WriteLine("• Whatever is left on top right before the push is the incoming value's");
@@ -304,7 +305,7 @@ namespace DataStructures.SpecializedStructures.MonotonicStack
                 var result = stack.Push(i, input[i]);
                 var popped = result.Popped.Count == 0 ? "-" : string.Join(", ", result.Popped);
                 var previous = result.Previous?.ToString() ?? "none";
-                Console.WriteLine($"  push {input[i]}@{i}   evicted: {popped,-12} previous: {previous}");
+                Console.WriteLine($"  i={i}  push {input[i],3}   evicted: {popped,-22} previous: {previous}");
                 Console.Write("    ");
                 stack.Print();
             }

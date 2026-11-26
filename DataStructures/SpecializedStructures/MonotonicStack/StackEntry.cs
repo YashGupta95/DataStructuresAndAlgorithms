@@ -12,6 +12,6 @@ namespace DataStructures.SpecializedStructures.MonotonicStack
     /// </summary>
     public readonly record struct StackEntry(int Index, int Value)
     {
-        public override string ToString() => $"{Value}@{Index}";
+        public override string ToString() => $"{Value} (i={Index})";
     }
 }

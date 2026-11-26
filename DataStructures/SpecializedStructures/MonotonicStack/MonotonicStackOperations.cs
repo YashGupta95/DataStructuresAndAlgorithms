@@ -234,13 +234,13 @@ namespace DataStructures.SpecializedStructures.MonotonicStack
         public StackEntry[] ToArray() => entries.ToArray();
 
         /// <summary>
-        /// Prints the stack on one line, bottom to top, as <c>value@index</c> entries.
+        /// Prints the stack on one line, bottom to top, as <c>value (i=index)</c> entries.
         /// </summary>
         public void Print()
         {
             var direction = order == MonotonicOrder.Increasing ? "increasing" : "decreasing";
             var mode = strict ? "strict" : "non-strict";
-            var body = entries.Count == 0 ? "(empty)" : string.Join("  ", entries);
+            var body = entries.Count == 0 ? "(empty)" : string.Join(", ", entries);
             Console.WriteLine($"  bottom [ {body} ] top   ({direction}, {mode})");
         }
 
